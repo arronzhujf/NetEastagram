@@ -1,0 +1,535 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		07BD127A1E1682F300377C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD12791E1682F300377C7A /* AppDelegate.swift */; };
+		07BD127C1E1682F300377C7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD127B1E1682F300377C7A /* ViewController.swift */; };
+		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
+		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
+		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
+		07BD128F1E1682F300377C7A /* NetEastagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD128E1E1682F300377C7A /* NetEastagramTests.swift */; };
+		07BD129A1E1682F300377C7A /* NetEastagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD12991E1682F300377C7A /* NetEastagramUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		07BD128B1E1682F300377C7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BD126E1E1682F300377C7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BD12751E1682F300377C7A;
+			remoteInfo = NetEastagram;
+		};
+		07BD12961E1682F300377C7A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07BD126E1E1682F300377C7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 07BD12751E1682F300377C7A;
+			remoteInfo = NetEastagram;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BD12791E1682F300377C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		07BD127B1E1682F300377C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07BD12831E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		07BD12851E1682F300377C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BD128A1E1682F300377C7A /* NetEastagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetEastagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BD128E1E1682F300377C7A /* NetEastagramTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEastagramTests.swift; sourceTree = "<group>"; };
+		07BD12901E1682F300377C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07BD12951E1682F300377C7A /* NetEastagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetEastagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		07BD12991E1682F300377C7A /* NetEastagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEastagramUITests.swift; sourceTree = "<group>"; };
+		07BD129B1E1682F300377C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07BD12731E1682F300377C7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BD12871E1682F300377C7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BD12921E1682F300377C7A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07BD126D1E1682F300377C7A = {
+			isa = PBXGroup;
+			children = (
+				07BD12781E1682F300377C7A /* NetEastagram */,
+				07BD128D1E1682F300377C7A /* NetEastagramTests */,
+				07BD12981E1682F300377C7A /* NetEastagramUITests */,
+				07BD12771E1682F300377C7A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		07BD12771E1682F300377C7A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				07BD12761E1682F300377C7A /* NetEastagram.app */,
+				07BD128A1E1682F300377C7A /* NetEastagramTests.xctest */,
+				07BD12951E1682F300377C7A /* NetEastagramUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		07BD12781E1682F300377C7A /* NetEastagram */ = {
+			isa = PBXGroup;
+			children = (
+				07BD12791E1682F300377C7A /* AppDelegate.swift */,
+				07BD127B1E1682F300377C7A /* ViewController.swift */,
+				07BD127D1E1682F300377C7A /* Main.storyboard */,
+				07BD12801E1682F300377C7A /* Assets.xcassets */,
+				07BD12821E1682F300377C7A /* LaunchScreen.storyboard */,
+				07BD12851E1682F300377C7A /* Info.plist */,
+			);
+			path = NetEastagram;
+			sourceTree = "<group>";
+		};
+		07BD128D1E1682F300377C7A /* NetEastagramTests */ = {
+			isa = PBXGroup;
+			children = (
+				07BD128E1E1682F300377C7A /* NetEastagramTests.swift */,
+				07BD12901E1682F300377C7A /* Info.plist */,
+			);
+			path = NetEastagramTests;
+			sourceTree = "<group>";
+		};
+		07BD12981E1682F300377C7A /* NetEastagramUITests */ = {
+			isa = PBXGroup;
+			children = (
+				07BD12991E1682F300377C7A /* NetEastagramUITests.swift */,
+				07BD129B1E1682F300377C7A /* Info.plist */,
+			);
+			path = NetEastagramUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		07BD12751E1682F300377C7A /* NetEastagram */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BD129E1E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagram" */;
+			buildPhases = (
+				07BD12721E1682F300377C7A /* Sources */,
+				07BD12731E1682F300377C7A /* Frameworks */,
+				07BD12741E1682F300377C7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NetEastagram;
+			productName = NetEastagram;
+			productReference = 07BD12761E1682F300377C7A /* NetEastagram.app */;
+			productType = "com.apple.product-type.application";
+		};
+		07BD12891E1682F300377C7A /* NetEastagramTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BD12A11E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagramTests" */;
+			buildPhases = (
+				07BD12861E1682F300377C7A /* Sources */,
+				07BD12871E1682F300377C7A /* Frameworks */,
+				07BD12881E1682F300377C7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BD128C1E1682F300377C7A /* PBXTargetDependency */,
+			);
+			name = NetEastagramTests;
+			productName = NetEastagramTests;
+			productReference = 07BD128A1E1682F300377C7A /* NetEastagramTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		07BD12941E1682F300377C7A /* NetEastagramUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 07BD12A41E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagramUITests" */;
+			buildPhases = (
+				07BD12911E1682F300377C7A /* Sources */,
+				07BD12921E1682F300377C7A /* Frameworks */,
+				07BD12931E1682F300377C7A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07BD12971E1682F300377C7A /* PBXTargetDependency */,
+			);
+			name = NetEastagramUITests;
+			productName = NetEastagramUITests;
+			productReference = 07BD12951E1682F300377C7A /* NetEastagramUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		07BD126E1E1682F300377C7A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = JianfengZhu;
+				TargetAttributes = {
+					07BD12751E1682F300377C7A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VF4GVDALJ8;
+						ProvisioningStyle = Automatic;
+					};
+					07BD12891E1682F300377C7A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VF4GVDALJ8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 07BD12751E1682F300377C7A;
+					};
+					07BD12941E1682F300377C7A = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VF4GVDALJ8;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 07BD12751E1682F300377C7A;
+					};
+				};
+			};
+			buildConfigurationList = 07BD12711E1682F300377C7A /* Build configuration list for PBXProject "NetEastagram" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 07BD126D1E1682F300377C7A;
+			productRefGroup = 07BD12771E1682F300377C7A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				07BD12751E1682F300377C7A /* NetEastagram */,
+				07BD12891E1682F300377C7A /* NetEastagramTests */,
+				07BD12941E1682F300377C7A /* NetEastagramUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		07BD12741E1682F300377C7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */,
+				07BD12811E1682F300377C7A /* Assets.xcassets in Resources */,
+				07BD127F1E1682F300377C7A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BD12881E1682F300377C7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BD12931E1682F300377C7A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		07BD12721E1682F300377C7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BD127C1E1682F300377C7A /* ViewController.swift in Sources */,
+				07BD127A1E1682F300377C7A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BD12861E1682F300377C7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BD128F1E1682F300377C7A /* NetEastagramTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		07BD12911E1682F300377C7A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07BD129A1E1682F300377C7A /* NetEastagramUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		07BD128C1E1682F300377C7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BD12751E1682F300377C7A /* NetEastagram */;
+			targetProxy = 07BD128B1E1682F300377C7A /* PBXContainerItemProxy */;
+		};
+		07BD12971E1682F300377C7A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 07BD12751E1682F300377C7A /* NetEastagram */;
+			targetProxy = 07BD12961E1682F300377C7A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		07BD127D1E1682F300377C7A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07BD127E1E1682F300377C7A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		07BD12821E1682F300377C7A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				07BD12831E1682F300377C7A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		07BD129C1E1682F300377C7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		07BD129D1E1682F300377C7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		07BD129F1E1682F300377C7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VF4GVDALJ8;
+				INFOPLIST_FILE = NetEastagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		07BD12A01E1682F300377C7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VF4GVDALJ8;
+				INFOPLIST_FILE = NetEastagram/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagram;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		07BD12A21E1682F300377C7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VF4GVDALJ8;
+				INFOPLIST_FILE = NetEastagramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetEastagram.app/NetEastagram";
+			};
+			name = Debug;
+		};
+		07BD12A31E1682F300377C7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = VF4GVDALJ8;
+				INFOPLIST_FILE = NetEastagramTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagramTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NetEastagram.app/NetEastagram";
+			};
+			name = Release;
+		};
+		07BD12A51E1682F300377C7A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = VF4GVDALJ8;
+				INFOPLIST_FILE = NetEastagramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NetEastagram;
+			};
+			name = Debug;
+		};
+		07BD12A61E1682F300377C7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = VF4GVDALJ8;
+				INFOPLIST_FILE = NetEastagramUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagramUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = NetEastagram;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		07BD12711E1682F300377C7A /* Build configuration list for PBXProject "NetEastagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BD129C1E1682F300377C7A /* Debug */,
+				07BD129D1E1682F300377C7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		07BD129E1E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagram" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BD129F1E1682F300377C7A /* Debug */,
+				07BD12A01E1682F300377C7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07BD12A11E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagramTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BD12A21E1682F300377C7A /* Debug */,
+				07BD12A31E1682F300377C7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		07BD12A41E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagramUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				07BD12A51E1682F300377C7A /* Debug */,
+				07BD12A61E1682F300377C7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 07BD126E1E1682F300377C7A /* Project object */;
+}
