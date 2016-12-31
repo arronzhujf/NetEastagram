@@ -14,6 +14,7 @@
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
 		07BD128F1E1682F300377C7A /* NetEastagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD128E1E1682F300377C7A /* NetEastagramTests.swift */; };
 		07BD129A1E1682F300377C7A /* NetEastagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD12991E1682F300377C7A /* NetEastagramUITests.swift */; };
+		DA8071CCBDEA29678B2471C4 /* Pods_NetEastagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.release.xcconfig"; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD12791E1682F300377C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07BD127B1E1682F300377C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +49,8 @@
 		07BD12951E1682F300377C7A /* NetEastagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetEastagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD12991E1682F300377C7A /* NetEastagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEastagramUITests.swift; sourceTree = "<group>"; };
 		07BD129B1E1682F300377C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetEastagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3F4E4C5A8DAE23DB1B5BB52 /* Pods-NetEastagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA8071CCBDEA29678B2471C4 /* Pods_NetEastagram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		073C6FBF1E1766C200A5B56E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				07C59FAB1E1789A100A44F97 /* Model */,
+				07C59FAA1E17896700A44F97 /* Util */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 		07BD126D1E1682F300377C7A = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				07BD128D1E1682F300377C7A /* NetEastagramTests */,
 				07BD12981E1682F300377C7A /* NetEastagramUITests */,
 				07BD12771E1682F300377C7A /* Products */,
+				DC3E44420F86A096073A7F8B /* Pods */,
+				1707BCA2B0E953EA671C9B9F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,12 +113,9 @@
 		07BD12781E1682F300377C7A /* NetEastagram */ = {
 			isa = PBXGroup;
 			children = (
-				07BD12791E1682F300377C7A /* AppDelegate.swift */,
-				07BD127B1E1682F300377C7A /* ViewController.swift */,
-				07BD127D1E1682F300377C7A /* Main.storyboard */,
-				07BD12801E1682F300377C7A /* Assets.xcassets */,
-				07BD12821E1682F300377C7A /* LaunchScreen.storyboard */,
-				07BD12851E1682F300377C7A /* Info.plist */,
+				073C6FBF1E1766C200A5B56E /* Common */,
+				07C59FA91E1788F500A44F97 /* Business */,
+				07C59FA81E1788A700A44F97 /* Main */,
 			);
 			path = NetEastagram;
 			sourceTree = "<group>";
@@ -125,6 +138,89 @@
 			path = NetEastagramUITests;
 			sourceTree = "<group>";
 		};
+		07C59FA81E1788A700A44F97 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				07BD12791E1682F300377C7A /* AppDelegate.swift */,
+				07BD127B1E1682F300377C7A /* ViewController.swift */,
+				07BD127D1E1682F300377C7A /* Main.storyboard */,
+				07BD12801E1682F300377C7A /* Assets.xcassets */,
+				07BD12821E1682F300377C7A /* LaunchScreen.storyboard */,
+				07BD12851E1682F300377C7A /* Info.plist */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		07C59FA91E1788F500A44F97 /* Business */ = {
+			isa = PBXGroup;
+			children = (
+				07C59FAC1E1789FD00A44F97 /* Homepage */,
+				07C59FAD1E178A0B00A44F97 /* Search */,
+				07C59FAE1E178A1E00A44F97 /* Shoot */,
+				07C59FAF1E178A2500A44F97 /* User */,
+			);
+			name = Business;
+			sourceTree = "<group>";
+		};
+		07C59FAA1E17896700A44F97 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		07C59FAB1E1789A100A44F97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		07C59FAC1E1789FD00A44F97 /* Homepage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Homepage;
+			sourceTree = "<group>";
+		};
+		07C59FAD1E178A0B00A44F97 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		07C59FAE1E178A1E00A44F97 /* Shoot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shoot;
+			sourceTree = "<group>";
+		};
+		07C59FAF1E178A2500A44F97 /* User */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		1707BCA2B0E953EA671C9B9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC3E44420F86A096073A7F8B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3F4E4C5A8DAE23DB1B5BB52 /* Pods-NetEastagram.debug.xcconfig */,
+				02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +228,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 07BD129E1E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagram" */;
 			buildPhases = (
+				4DF51A986E18640D5C666511 /* [CP] Check Pods Manifest.lock */,
 				07BD12721E1682F300377C7A /* Sources */,
 				07BD12731E1682F300377C7A /* Frameworks */,
 				07BD12741E1682F300377C7A /* Resources */,
+				98046322E18843ABCDFBE61B /* [CP] Embed Pods Frameworks */,
+				FA9659664179AC6A2A0B972F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +356,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DF51A986E18640D5C666511 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		98046322E18843ABCDFBE61B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA9659664179AC6A2A0B972F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07BD12721E1682F300377C7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -358,12 +505,13 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = "";
 			};
 			name = Debug;
 		};
@@ -401,16 +549,18 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = "";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
 		07BD129F1E1682F300377C7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3F4E4C5A8DAE23DB1B5BB52 /* Pods-NetEastagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VF4GVDALJ8;
@@ -424,6 +574,7 @@
 		};
 		07BD12A01E1682F300377C7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = VF4GVDALJ8;
@@ -512,6 +663,7 @@
 				07BD12A01E1682F300377C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07BD12A11E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagramTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +672,7 @@
 				07BD12A31E1682F300377C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		07BD12A41E1682F300377C7A /* Build configuration list for PBXNativeTarget "NetEastagramUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +681,7 @@
 				07BD12A61E1682F300377C7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
