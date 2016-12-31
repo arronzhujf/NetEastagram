@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07BD127A1E1682F300377C7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD12791E1682F300377C7A /* AppDelegate.swift */; };
-		07BD127C1E1682F300377C7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD127B1E1682F300377C7A /* ViewController.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
 		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
 		07BD128F1E1682F300377C7A /* NetEastagramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD128E1E1682F300377C7A /* NetEastagramTests.swift */; };
 		07BD129A1E1682F300377C7A /* NetEastagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD12991E1682F300377C7A /* NetEastagramUITests.swift */; };
+		07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59FB11E178C2600A44F97 /* AppDelegate.swift */; };
+		07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59FB21E178C2600A44F97 /* ViewController.swift */; };
 		DA8071CCBDEA29678B2471C4 /* Pods_NetEastagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,8 +37,6 @@
 /* Begin PBXFileReference section */
 		02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.release.xcconfig"; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		07BD12791E1682F300377C7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		07BD127B1E1682F300377C7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		07BD12831E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +47,9 @@
 		07BD12951E1682F300377C7A /* NetEastagramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetEastagramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD12991E1682F300377C7A /* NetEastagramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetEastagramUITests.swift; sourceTree = "<group>"; };
 		07BD129B1E1682F300377C7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		07C59FB01E178C2600A44F97 /* NetEastagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetEastagram-Bridging-Header.h"; sourceTree = "<group>"; };
+		07C59FB11E178C2600A44F97 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Main/AppDelegate.swift; sourceTree = "<group>"; };
+		07C59FB21E178C2600A44F97 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Main/ViewController.swift; sourceTree = "<group>"; };
 		5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetEastagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F4E4C5A8DAE23DB1B5BB52 /* Pods-NetEastagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -141,12 +142,13 @@
 		07C59FA81E1788A700A44F97 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				07BD12791E1682F300377C7A /* AppDelegate.swift */,
-				07BD127B1E1682F300377C7A /* ViewController.swift */,
+				07C59FB11E178C2600A44F97 /* AppDelegate.swift */,
+				07C59FB21E178C2600A44F97 /* ViewController.swift */,
 				07BD127D1E1682F300377C7A /* Main.storyboard */,
 				07BD12801E1682F300377C7A /* Assets.xcassets */,
 				07BD12821E1682F300377C7A /* LaunchScreen.storyboard */,
 				07BD12851E1682F300377C7A /* Info.plist */,
+				07C59FB01E178C2600A44F97 /* NetEastagram-Bridging-Header.h */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -293,6 +295,7 @@
 					07BD12751E1682F300377C7A = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = VF4GVDALJ8;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					07BD12891E1682F300377C7A = {
@@ -409,8 +412,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07BD127C1E1682F300377C7A /* ViewController.swift in Sources */,
-				07BD127A1E1682F300377C7A /* AppDelegate.swift in Sources */,
+				07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */,
+				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,11 +566,14 @@
 			baseConfigurationReference = C3F4E4C5A8DAE23DB1B5BB52 /* Pods-NetEastagram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VF4GVDALJ8;
 				INFOPLIST_FILE = NetEastagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetEastagram/NetEastagram-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -577,11 +583,13 @@
 			baseConfigurationReference = 02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = VF4GVDALJ8;
 				INFOPLIST_FILE = NetEastagram/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.arronzhu.NetEastagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NetEastagram/NetEastagram-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
