@@ -14,6 +14,12 @@
 		07BD129A1E1682F300377C7A /* NetEastagramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07BD12991E1682F300377C7A /* NetEastagramUITests.swift */; };
 		07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59FB11E178C2600A44F97 /* AppDelegate.swift */; };
 		07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59FB21E178C2600A44F97 /* ViewController.swift */; };
+		07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E08E681E419875001DEC23 /* MainTabBarViewController.swift */; };
+		07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD941E41A72A00B0C98D /* HomeViewController.swift */; };
+		07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD961E41A82000B0C98D /* SearchViewController.swift */; };
+		07F4DD991E41A83500B0C98D /* ShootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD981E41A83500B0C98D /* ShootViewController.swift */; };
+		07F4DD9B1E41A87200B0C98D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD9A1E41A87200B0C98D /* UserViewController.swift */; };
+		07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */; };
 		DA8071CCBDEA29678B2471C4 /* Pods_NetEastagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +56,12 @@
 		07C59FB01E178C2600A44F97 /* NetEastagram-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NetEastagram-Bridging-Header.h"; sourceTree = "<group>"; };
 		07C59FB11E178C2600A44F97 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Main/AppDelegate.swift; sourceTree = "<group>"; };
 		07C59FB21E178C2600A44F97 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Main/ViewController.swift; sourceTree = "<group>"; };
+		07E08E681E419875001DEC23 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Main/MainTabBarViewController.swift; sourceTree = "<group>"; };
+		07F4DD941E41A72A00B0C98D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Business/Homepage/HomeViewController.swift; sourceTree = "<group>"; };
+		07F4DD961E41A82000B0C98D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Business/Search/SearchViewController.swift; sourceTree = "<group>"; };
+		07F4DD981E41A83500B0C98D /* ShootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootViewController.swift; path = Business/Shoot/ShootViewController.swift; sourceTree = "<group>"; };
+		07F4DD9A1E41A87200B0C98D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Business/User/UserViewController.swift; sourceTree = "<group>"; };
+		07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Main/BaseViewController.swift; sourceTree = "<group>"; };
 		5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetEastagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3F4E4C5A8DAE23DB1B5BB52 /* Pods-NetEastagram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +155,8 @@
 			isa = PBXGroup;
 			children = (
 				07C59FB11E178C2600A44F97 /* AppDelegate.swift */,
+				07E08E681E419875001DEC23 /* MainTabBarViewController.swift */,
+				07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */,
 				07C59FB21E178C2600A44F97 /* ViewController.swift */,
 				07BD127D1E1682F300377C7A /* Main.storyboard */,
 				07BD12801E1682F300377C7A /* Assets.xcassets */,
@@ -181,6 +195,7 @@
 		07C59FAC1E1789FD00A44F97 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
+				07F4DD941E41A72A00B0C98D /* HomeViewController.swift */,
 			);
 			name = Homepage;
 			sourceTree = "<group>";
@@ -188,6 +203,7 @@
 		07C59FAD1E178A0B00A44F97 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				07F4DD961E41A82000B0C98D /* SearchViewController.swift */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -195,6 +211,7 @@
 		07C59FAE1E178A1E00A44F97 /* Shoot */ = {
 			isa = PBXGroup;
 			children = (
+				07F4DD981E41A83500B0C98D /* ShootViewController.swift */,
 			);
 			name = Shoot;
 			sourceTree = "<group>";
@@ -202,6 +219,7 @@
 		07C59FAF1E178A2500A44F97 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				07F4DD9A1E41A87200B0C98D /* UserViewController.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -412,8 +430,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07F4DD9B1E41A87200B0C98D /* UserViewController.swift in Sources */,
+				07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */,
+				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,
+				07F4DD991E41A83500B0C98D /* ShootViewController.swift in Sources */,
 				07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */,
+				07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
+				07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
