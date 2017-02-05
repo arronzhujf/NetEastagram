@@ -13,7 +13,7 @@ class ShootViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationItem.title = "Shoot"
+        navigationItem.title = Constants.SHOOT_TITLE
     }
 
     override func didReceiveMemoryWarning() {

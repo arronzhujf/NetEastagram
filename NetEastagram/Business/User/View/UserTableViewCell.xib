@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UserTableViewCell" customModule="NetEastagram" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="312" height="54"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jdo-Fq-3b6" userLabel="icon">
+                    <rect key="frame" x="10" y="5" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="jdo-Fq-3b6" secondAttribute="height" multiplier="1:1" id="1IP-mG-9dm"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yA-dR-nzx">
+                    <rect key="frame" x="64" y="17.5" width="39.5" height="19.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="me-arrow" translatesAutoresizingMaskIntoConstraints="NO" id="1l4-8b-b9L" userLabel="arrow">
+                    <rect key="frame" x="276.5" y="12" width="21.5" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="1l4-8b-b9L" secondAttribute="height" multiplier="3:4" id="nzm-kf-VIV"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1yA-dR-nzx" firstAttribute="leading" secondItem="jdo-Fq-3b6" secondAttribute="trailing" constant="10" id="2zT-vx-IH8"/>
+                <constraint firstItem="jdo-Fq-3b6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="3D0-Hf-Tef"/>
+                <constraint firstAttribute="trailing" secondItem="1l4-8b-b9L" secondAttribute="trailing" constant="14" id="DhQ-IX-Czi"/>
+                <constraint firstAttribute="bottom" secondItem="1l4-8b-b9L" secondAttribute="bottom" constant="12" id="H3U-Zn-JeR"/>
+                <constraint firstItem="jdo-Fq-3b6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="5" id="Xv3-bz-ZQx"/>
+                <constraint firstItem="1yA-dR-nzx" firstAttribute="centerY" secondItem="jdo-Fq-3b6" secondAttribute="centerY" id="dn0-md-9rl"/>
+                <constraint firstAttribute="bottom" secondItem="jdo-Fq-3b6" secondAttribute="bottom" constant="5" id="fR4-L8-44a"/>
+                <constraint firstItem="1l4-8b-b9L" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="qnm-iN-7vo"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="arrow" destination="1l4-8b-b9L" id="MNO-Hh-se1"/>
+                <outlet property="content" destination="1yA-dR-nzx" id="lKu-yk-iOD"/>
+                <outlet property="icon" destination="jdo-Fq-3b6" id="Qpe-Le-bCW"/>
+            </connections>
+            <point key="canvasLocation" x="-36" y="-236"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="me-arrow" width="8" height="12"/>
+    </resources>
+</document>

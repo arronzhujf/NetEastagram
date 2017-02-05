@@ -13,7 +13,7 @@ class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationItem.title = "Home"
+        navigationItem.title = Constants.HOME_TITLE
     }
 
     override func didReceiveMemoryWarning() {
