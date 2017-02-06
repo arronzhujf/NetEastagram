@@ -18,6 +18,7 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         }
     }
     private lazy var userTableView: UITableView = self.createUserTableView()
+    private lazy var setButton: UIBarButtonItem = self.createSetButton()
     
     //MARK: - lifecycle
     
@@ -27,10 +28,17 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         initInternal()
         isLogin = UserDefaults.standard.bool(forKey: Constants.IS_LOGIN_KEY)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        isLogin = true
+    }
 
     //MARK: - private
     private func initInternal() {
         navigationItem.title = Constants.USER_TITLE
+        navigationItem.rightBarButtonItem = setButton
+        (setButton.customView as! UIButton).isEnabled = false
         let notLoginHeaderView = UserNotLoginHeaderView(frame: CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH, height: 185.0))
         userTableView.tableHeaderView = notLoginHeaderView
         userTableView.isScrollEnabled = false
@@ -45,10 +53,20 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         if isLogin {
             let loginedHeaderView = UserLoginedHeaderView(frame: CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH, height: 185.0))
             userTableView.tableHeaderView = loginedHeaderView
+            (setButton.customView as! UIButton).isEnabled = true
         } else {
             let notLoginHeaderView = UserNotLoginHeaderView(frame: CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH, height: 185.0))
             userTableView.tableHeaderView = notLoginHeaderView
+            (setButton.customView as! UIButton).isEnabled = false
         }
+    }
+    
+    @objc func tapOnSetButton() {
+        guard let navigationController = navigationController  else {
+            return
+        }
+        print("tap On Set Button.")
+        navigationController.pushViewController(SettingViewController(), animated: true)
     }
     
     //MARK: - lazy init
@@ -56,6 +74,16 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         let res = UITableView()
         res.delegate = self
         res.dataSource = self
+        return res
+    }
+    
+    private func createSetButton() -> UIBarButtonItem {
+        let customBtn = UIButton(type: .custom)
+        customBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        customBtn.setBackgroundImage(#imageLiteral(resourceName: "me-set"), for: .normal)
+        customBtn.setBackgroundImage(#imageLiteral(resourceName: "me-set-light"), for: .disabled)
+        customBtn.addTarget(self, action: #selector(tapOnSetButton), for: .touchUpInside)
+        let res = UIBarButtonItem(customView: customBtn)
         return res
     }
     

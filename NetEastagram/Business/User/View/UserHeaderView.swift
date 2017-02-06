@@ -9,9 +9,14 @@
 import UIKit
 import SnapKit
 
+protocol UserNotLoginHeaderViewDelegate: NSObjectProtocol {
+    func headerView(_ notLoginHeaderView: UserNotLoginHeaderView, didTapLoginButton button: UIButton)
+}
+
 class UserNotLoginHeaderView: UIView {
     private lazy var loginButton: UIButton = self.createLoginButton()
-
+    weak var delegate: UserNotLoginHeaderViewDelegate?
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         initInternal()
@@ -21,6 +26,7 @@ class UserNotLoginHeaderView: UIView {
         return nil
     }
     
+    //MARK: - private
     private func initInternal() {
         backgroundColor = UIColor(netHex: 0x607D8B)
         addSubview(loginButton)
@@ -32,6 +38,12 @@ class UserNotLoginHeaderView: UIView {
         }
     }
     
+    @objc func tapOnLoginButton() {
+        if let delegate = delegate {
+            delegate.headerView(self, didTapLoginButton: loginButton)
+        }
+    }
+    
     //MARK: - lazy init
     
     private func createLoginButton() -> UIButton {
@@ -40,6 +52,7 @@ class UserNotLoginHeaderView: UIView {
         res.layer.cornerRadius = 5
         res.setBackgroundImage(#imageLiteral(resourceName: "me-login"), for: .normal)
         res.setBackgroundImage(#imageLiteral(resourceName: "me-login-press"), for: .highlighted)
+        res.addTarget(self, action: #selector(tapOnLoginButton), for: .touchUpInside)
         return res
     }
 }
@@ -52,7 +65,7 @@ class UserLoginedHeaderView: UIView {
     public lazy var portrait: UIImageView = self.createPortrait()
     public lazy var nameLabel: UILabel = self.createNameLabel()
     
-    override public init(frame: CGRect) {
+    override init(frame: CGRect) {
         super.init(frame: frame)
         initInternal()
     }
@@ -69,16 +82,11 @@ class UserLoginedHeaderView: UIView {
     
         topView.snp.makeConstraints { (make) in
             make.left.top.right.equalToSuperview()
-            make.height.equalTo(180.0)
+            make.height.equalTo(90.0)
         }
         bottomView.snp.makeConstraints { (make) in
             make.left.bottom.right.equalToSuperview()
             make.top.equalTo(topView.snp.bottom)
-        }
-        portrait.snp.makeConstraints { (make) in
-            make.center.equalToSuperview().offset(-5.0)
-            make.width.equalTo(portrait.snp.height)
-            make.left.equalTo(self.snp.left).offset(153.5)
         }
         nameLabel.snp.makeConstraints { (make) in
             make.centerX.equalToSuperview()
@@ -101,14 +109,18 @@ class UserLoginedHeaderView: UIView {
     }
     
     private func createPortrait() -> UIImageView {
-        let res = UIImageView(image: #imageLiteral(resourceName: "me"))
+        let res = UIImageView(frame: CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH-307, height: Constants.SCREEN_WIDTH-307))
+        res.center = CGPoint(x: Constants.SCREEN_WIDTH / 2.0, y: 90)
+        res.image = #imageLiteral(resourceName: "me")
+        res.layer.cornerRadius = res.frame.width / 2.0
+        res.clipsToBounds = true
         return res
     }
     
     private func createNameLabel() -> UILabel {
         let res = UILabel()
         res.text = "test1992"
-        res.textColor = UIColor(netHex: 0xacacac)
+        res.textColor = Constants.GRAY_COLOR
         res.font = UIFont.systemFont(ofSize: 13)
         return res
     }

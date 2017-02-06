@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3C81E489045006CB4C4 /* SettingViewController.swift */; };
+		0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
 		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.release.xcconfig"; sourceTree = "<group>"; };
+		0735A3C81E489045006CB4C4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Business/User/Controller/SettingViewController.swift; sourceTree = "<group>"; };
+		0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingSectionView.swift; path = Business/User/View/SettingSectionView.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				07F4DDA51E46E53C00B0C98D /* UserViewController.swift */,
+				0735A3C81E489045006CB4C4 /* SettingViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				07F4DDA71E46EC4400B0C98D /* UserHeaderView.swift */,
 				07F4DDAF1E47118A00B0C98D /* UserTableViewCell.xib */,
 				07F4DDB11E4711FA00B0C98D /* UserTableViewCell.swift */,
+				0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -473,6 +479,7 @@
 				07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */,
 				07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */,
 				07F4DDA81E46EC4400B0C98D /* UserHeaderView.swift in Sources */,
+				0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */,
 				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,
 				07F4DDB21E4711FA00B0C98D /* UserTableViewCell.swift in Sources */,
 				07F4DD991E41A83500B0C98D /* ShootViewController.swift in Sources */,
@@ -481,6 +488,7 @@
 				07F4DDAC1E47037500B0C98D /* Utils.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 				07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */,
+				0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */,
 				07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
