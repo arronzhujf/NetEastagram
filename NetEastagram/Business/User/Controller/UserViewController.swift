@@ -65,7 +65,6 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         guard let navigationController = navigationController  else {
             return
         }
-        print("tap On Set Button.")
         navigationController.pushViewController(SettingViewController(), animated: true)
     }
     

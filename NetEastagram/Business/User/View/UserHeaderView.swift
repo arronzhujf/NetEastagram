@@ -38,7 +38,7 @@ class UserNotLoginHeaderView: UIView {
         }
     }
     
-    @objc func tapOnLoginButton() {
+    @objc private func tapOnLoginButton() {
         if let delegate = delegate {
             delegate.headerView(self, didTapLoginButton: loginButton)
         }

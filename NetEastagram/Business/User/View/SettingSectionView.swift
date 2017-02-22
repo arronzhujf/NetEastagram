@@ -13,11 +13,16 @@ enum SectionType {
     case SwitchType
 }
 
+protocol SettingSectionViewDelegate:  NSObjectProtocol{
+    func sectionViewDidTapped(_ settingSectionView: SettingSectionView)
+}
+
 class SettingSectionView: UIView {
+    weak var delegate: SettingSectionViewDelegate?
     private let type: SectionType
     public var title = UILabel()
     public var nameLabel = UILabel()
-    private lazy var switchImageView = UIImageView()
+    public var switchImageView = UIImageView()
     
     init(frame: CGRect, type: SectionType) {
         self.type = type
@@ -29,7 +34,9 @@ class SettingSectionView: UIView {
         return nil
     }
     
+    //MARK: - private
     private func initInternal() {
+        addTouchEvent()
         title.textColor = Constants.GRAY_COLOR
         title.font = UIFont.systemFont(ofSize: 15.0)
         addSubview(title)
@@ -66,6 +73,17 @@ class SettingSectionView: UIView {
                 make.centerY.equalToSuperview()
                 make.right.equalToSuperview().offset(-16)
             })
+        }
+    }
+    
+    private func addTouchEvent() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(sectionViewTapped))
+        addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func sectionViewTapped() {
+        if let delegate = delegate {
+            delegate.sectionViewDidTapped(self)
         }
     }
 }

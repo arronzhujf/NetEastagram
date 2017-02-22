@@ -27,10 +27,12 @@ struct Constants {
     static let FAVORITE = "我的偏好:"
     static let INVITE = "邀请好友:"
     static let MODITY_NAME = "修改用户名:"
-    static let FEEDBACK = "意见反馈:"
+    static let ADVISE_FEEDBACK = "意见反馈:"
+    static let FEEDBACK = "反馈"
     static let SAVE_ORIGINAL = "保存原始图片:"
     static let CLEAR_CACHE = "清楚缓存:"
     
     //MARK: - data persistence
     static let IS_LOGIN_KEY = "isLoginKey"
+    static let IS_SAVE_ORIGINAL_KEY = "isSaveOriginalKey"
 }
