@@ -23,9 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = tabVC
             window.makeKeyAndVisible()
         }
+        // custom bar
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.barTintColor = UIColor(netHex: 0x607d8b)
-        navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 18.0), NSForegroundColorAttributeName: UIColor(netHex: 0xffffff)]
+        navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 18.0), NSForegroundColorAttributeName: UIColor.white]
+        navigationBarAppearace.tintColor = .white
+        navigationBarAppearace.backIndicatorImage = UIImage(named: "back-icon")
+        navigationBarAppearace.backIndicatorTransitionMaskImage = UIImage(named: "back-icon")
+        
         UIApplication.shared.statusBarStyle = .lightContent
         setStatusBarBackgroundColor(color: UIColor(netHex: 0x3b515c))
         return true

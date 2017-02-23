@@ -12,8 +12,7 @@ class BaseViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        edgesForExtendedLayout = [.bottom]
-        automaticallyAdjustsScrollViewInsets = false
+        customInternal()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -22,14 +21,22 @@ class BaseViewController: UIViewController {
         }
     }
     
+    //MARK: - private
     public func isTabbarVisible() -> Bool {
         return true
+    }
+    
+    private func customInternal() {
+        edgesForExtendedLayout = [.bottom]
+        automaticallyAdjustsScrollViewInsets = false
+        let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationItem.backBarButtonItem = backItem
     }
     
     //MARK: - tabbar utils
     
     // pass a param to describe the state change, an animated flag and a completion block matching UIView animations completion
-    func setTabBarVisible(visible: Bool, animated: Bool, completion:@escaping (Bool)->Void) {
+    private func setTabBarVisible(visible: Bool, animated: Bool, completion:@escaping (Bool)->Void) {
         
         // bail if the current state matches the desired state
         if (tabBarIsVisible() == visible) {
@@ -49,7 +56,7 @@ class BaseViewController: UIViewController {
         }, completion: completion)
     }
     
-    func tabBarIsVisible() -> Bool {
+    private func tabBarIsVisible() -> Bool {
         return tabBarController!.tabBar.frame.origin.y < view.frame.maxY
     }
 
