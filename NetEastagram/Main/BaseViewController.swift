@@ -60,4 +60,17 @@ class BaseViewController: UIViewController {
         return tabBarController!.tabBar.frame.origin.y < view.frame.maxY
     }
 
+    //MARK: - custom bar titleview
+    func customBarTileViewWith(image: UIImage?, title: String) {
+        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 18))
+        let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 18, height: 18))
+        leftImageView.image = image
+        let rightLabel = UILabel(frame: CGRect(x: 22, y: 0, width: 38, height: 18))
+        rightLabel.text = title
+        rightLabel.textColor = .white
+        rightLabel.font = UIFont.systemFont(ofSize: 18.0)
+        titleView.addSubview(leftImageView)
+        titleView.addSubview(rightLabel)
+        navigationItem.titleView = titleView
+    }
 }

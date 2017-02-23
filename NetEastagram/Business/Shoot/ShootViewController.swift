@@ -12,13 +12,12 @@ class ShootViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        navigationItem.title = Constants.SHOOT_TITLE
+        initInternal()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //MARK: - private
+    private func initInternal() {
+        customBarTileViewWith(image: UIImage(named: "shoot-bar-icon"), title: Constants.SHOOT_TITLE)
     }
 
 }

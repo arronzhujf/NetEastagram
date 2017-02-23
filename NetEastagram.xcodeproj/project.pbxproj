@@ -25,7 +25,7 @@
 		07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA01E45C19B00B0C98D /* Constants.swift */; };
 		07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA51E46E53C00B0C98D /* UserViewController.swift */; };
 		07F4DDA81E46EC4400B0C98D /* UserHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA71E46EC4400B0C98D /* UserHeaderView.swift */; };
-		07F4DDAC1E47037500B0C98D /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDAB1E47037500B0C98D /* Utils.swift */; };
+		07F4DDAC1E47037500B0C98D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDAB1E47037500B0C98D /* Extension.swift */; };
 		07F4DDB01E47118A00B0C98D /* UserTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 07F4DDAF1E47118A00B0C98D /* UserTableViewCell.xib */; };
 		07F4DDB21E4711FA00B0C98D /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDB11E4711FA00B0C98D /* UserTableViewCell.swift */; };
 		DA8071CCBDEA29678B2471C4 /* Pods_NetEastagram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */; };
@@ -75,7 +75,7 @@
 		07F4DDA01E45C19B00B0C98D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Util/Constants.swift; sourceTree = "<group>"; };
 		07F4DDA51E46E53C00B0C98D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Business/User/Controller/UserViewController.swift; sourceTree = "<group>"; };
 		07F4DDA71E46EC4400B0C98D /* UserHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserHeaderView.swift; path = Business/User/View/UserHeaderView.swift; sourceTree = "<group>"; };
-		07F4DDAB1E47037500B0C98D /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Common/Util/Utils.swift; sourceTree = "<group>"; };
+		07F4DDAB1E47037500B0C98D /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Extension.swift; path = Common/Util/Extension.swift; sourceTree = "<group>"; };
 		07F4DDAF1E47118A00B0C98D /* UserTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = UserTableViewCell.xib; path = Business/User/View/UserTableViewCell.xib; sourceTree = "<group>"; };
 		07F4DDB11E4711FA00B0C98D /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserTableViewCell.swift; path = Business/User/View/UserTableViewCell.swift; sourceTree = "<group>"; };
 		5EF645304CAA0E6AA057DD23 /* Pods_NetEastagram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetEastagram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,7 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				07F4DDA01E45C19B00B0C98D /* Constants.swift */,
-				07F4DDAB1E47037500B0C98D /* Utils.swift */,
+				07F4DDAB1E47037500B0C98D /* Extension.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -489,7 +489,7 @@
 				07E472E11E5D912A003AB89A /* FeedBackViewController.swift in Sources */,
 				07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */,
 				07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */,
-				07F4DDAC1E47037500B0C98D /* Utils.swift in Sources */,
+				07F4DDAC1E47037500B0C98D /* Extension.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 				07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */,
 				0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */,
