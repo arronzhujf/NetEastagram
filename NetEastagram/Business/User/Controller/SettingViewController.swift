@@ -60,7 +60,7 @@ class SettingViewController: BaseViewController, SettingSectionViewDelegate {
     }
     
     @objc func logoutBtnTapped() {
-        print("退出登录.")
+        showLogoutActionSheet()
     }
     
     private func updateSaveOriginalSectionUI() {
@@ -71,13 +71,32 @@ class SettingViewController: BaseViewController, SettingSectionViewDelegate {
         }
     }
     
+    //MARK: - action
+    private func showClearActionSheet() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: Constants.CANCEL, style: .cancel, handler: nil)
+        let logoutAction = UIAlertAction(title: Constants.CONFIRM_CLEAR, style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.addAction(logoutAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
+    private func showLogoutActionSheet() {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        let cancelAction = UIAlertAction(title: Constants.CANCEL, style: .cancel, handler: nil)
+        let logoutAction = UIAlertAction(title: Constants.CONFIRM_LOGOUT, style: .default, handler: nil)
+        alertController.addAction(cancelAction)
+        alertController.addAction(logoutAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     //MARK: - delegate
     func sectionViewDidTapped(_ settingSectionView: SettingSectionView) {
         guard let navigationController = navigationController, let title = settingSectionView.title.text else { return }
         switch title {
         case Constants.MODITY_NAME:
             print("1")
-        case Constants.FEEDBACK:
+        case Constants.ADVISE_FEEDBACK:
             navigationController.pushViewController(FeedBackViewController(), animated: true)
         case Constants.SAVE_ORIGINAL:
             if UserDefaults.standard.bool(forKey: Constants.IS_SAVE_ORIGINAL_KEY) {
@@ -87,7 +106,7 @@ class SettingViewController: BaseViewController, SettingSectionViewDelegate {
             }
             updateSaveOriginalSectionUI()
         case Constants.CLEAR_CACHE:
-            print("4")
+            showClearActionSheet()
         default:
             break
         }

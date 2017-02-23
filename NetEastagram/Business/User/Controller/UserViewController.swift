@@ -30,10 +30,21 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        guard let navigationController = navigationController else { return }
         super.viewWillAppear(animated)
+        navigationController.navigationBar.barTintColor = .white
+        navigationController.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 18.0), NSForegroundColorAttributeName: UIColor(netHex: 0x666666)]
+        setStatusBarBackgroundColor(color: .white)
         isLogin = true
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        guard let navigationController = navigationController else { return }
+        navigationController.navigationBar.barTintColor = UIColor(netHex: 0x607d8b)
+        navigationController.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 18.0), NSForegroundColorAttributeName: UIColor.white]
+        setStatusBarBackgroundColor(color: UIColor(netHex: 0x3b515c))
+    }
+    
     //MARK: - private
     private func initInternal() {
         navigationItem.title = Constants.USER_TITLE

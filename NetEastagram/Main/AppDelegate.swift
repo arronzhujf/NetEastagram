@@ -23,6 +23,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             window.rootViewController = tabVC
             window.makeKeyAndVisible()
         }
+        let navigationBarAppearace = UINavigationBar.appearance()
+        navigationBarAppearace.barTintColor = UIColor(netHex: 0x607d8b)
+        navigationBarAppearace.titleTextAttributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 18.0), NSForegroundColorAttributeName: UIColor(netHex: 0xffffff)]
+        UIApplication.shared.statusBarStyle = .lightContent
+        setStatusBarBackgroundColor(color: UIColor(netHex: 0x3b515c))
         return true
     }
 
@@ -47,7 +52,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 
