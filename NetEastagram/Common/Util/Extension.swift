@@ -23,6 +23,16 @@ extension UIColor {
 }
 
 extension UIView {
+    var height: CGFloat {
+        get { return frame.size.height }
+        set { frame.size.height = newValue }
+    }
+    
+    var width: CGFloat {
+        get { return frame.size.width }
+        set { frame.size.width = newValue }
+    }
+    
     class func fromNib<T : UIView>() -> T {
         return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
     }

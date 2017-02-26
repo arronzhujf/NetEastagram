@@ -20,6 +20,8 @@ struct Constants {
     static let HOME_TITLE = "热门"
     static let DATAILS = "详情"
     static let SHOOT_TITLE = "发布"
+    static let SHOOT = "拍照"
+    static let ALBUM = "相册"
     static let EDIT = "编辑"
     static let USER_TITLE = "我的"
     static let SET = "设置"

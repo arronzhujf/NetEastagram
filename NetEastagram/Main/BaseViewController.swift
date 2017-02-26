@@ -9,6 +9,8 @@
 import UIKit
 
 class BaseViewController: UIViewController {
+    public var tabBarHeight: CGFloat = 0
+    public var naviBarHeight: CGFloat = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class BaseViewController: UIViewController {
     private func customInternal() {
         edgesForExtendedLayout = [.bottom]
         automaticallyAdjustsScrollViewInsets = false
+        tabBarHeight = tabBarController?.tabBar.height ?? 0
+        naviBarHeight = navigationController?.navigationBar.height ?? 0
         let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
     }
@@ -44,7 +48,7 @@ class BaseViewController: UIViewController {
         }
         
         // get a frame calculation ready
-        let height = tabBarController!.tabBar.frame.size.height
+        let height = tabBarController!.tabBar.height
         let offsetY = (visible ? -height : height)
         
         // zero duration means no animation

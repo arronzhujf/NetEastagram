@@ -18,9 +18,10 @@
 		07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C59FB21E178C2600A44F97 /* ViewController.swift */; };
 		07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E08E681E419875001DEC23 /* MainTabBarViewController.swift */; };
 		07E472E11E5D912A003AB89A /* FeedBackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E01E5D912A003AB89A /* FeedBackViewController.swift */; };
+		07E472E61E630542003AB89A /* ShootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E51E630542003AB89A /* ShootViewController.swift */; };
+		07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */; };
 		07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD941E41A72A00B0C98D /* HomeViewController.swift */; };
 		07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD961E41A82000B0C98D /* SearchViewController.swift */; };
-		07F4DD991E41A83500B0C98D /* ShootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD981E41A83500B0C98D /* ShootViewController.swift */; };
 		07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */; };
 		07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA01E45C19B00B0C98D /* Constants.swift */; };
 		07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA51E46E53C00B0C98D /* UserViewController.swift */; };
@@ -68,9 +69,10 @@
 		07C59FB21E178C2600A44F97 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Main/ViewController.swift; sourceTree = "<group>"; };
 		07E08E681E419875001DEC23 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Main/MainTabBarViewController.swift; sourceTree = "<group>"; };
 		07E472E01E5D912A003AB89A /* FeedBackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedBackViewController.swift; path = Business/User/Controller/FeedBackViewController.swift; sourceTree = "<group>"; };
+		07E472E51E630542003AB89A /* ShootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootViewController.swift; path = Business/Shoot/Controller/ShootViewController.swift; sourceTree = "<group>"; };
+		07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTopLabelBottomButton.swift; path = Business/Shoot/View/ImageTopLabelBottomButton.swift; sourceTree = "<group>"; };
 		07F4DD941E41A72A00B0C98D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Business/Homepage/HomeViewController.swift; sourceTree = "<group>"; };
 		07F4DD961E41A82000B0C98D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Business/Search/SearchViewController.swift; sourceTree = "<group>"; };
-		07F4DD981E41A83500B0C98D /* ShootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootViewController.swift; path = Business/Shoot/ShootViewController.swift; sourceTree = "<group>"; };
 		07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Main/BaseViewController.swift; sourceTree = "<group>"; };
 		07F4DDA01E45C19B00B0C98D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Util/Constants.swift; sourceTree = "<group>"; };
 		07F4DDA51E46E53C00B0C98D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Business/User/Controller/UserViewController.swift; sourceTree = "<group>"; };
@@ -229,7 +231,9 @@
 		07C59FAE1E178A1E00A44F97 /* Shoot */ = {
 			isa = PBXGroup;
 			children = (
-				07F4DD981E41A83500B0C98D /* ShootViewController.swift */,
+				07E472E41E5FF5B2003AB89A /* Model */,
+				07E472E31E5FF5AB003AB89A /* View */,
+				07E472E21E5FF59F003AB89A /* Controller */,
 			);
 			name = Shoot;
 			sourceTree = "<group>";
@@ -242,6 +246,29 @@
 				07F4DDA21E46E4BA00B0C98D /* Controller */,
 			);
 			name = User;
+			sourceTree = "<group>";
+		};
+		07E472E21E5FF59F003AB89A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				07E472E51E630542003AB89A /* ShootViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		07E472E31E5FF5AB003AB89A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		07E472E41E5FF5B2003AB89A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		07F4DDA21E46E4BA00B0C98D /* Controller */ = {
@@ -480,17 +507,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */,
+				07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */,
 				07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */,
 				07F4DDA81E46EC4400B0C98D /* UserHeaderView.swift in Sources */,
 				0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */,
 				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,
 				07F4DDB21E4711FA00B0C98D /* UserTableViewCell.swift in Sources */,
-				07F4DD991E41A83500B0C98D /* ShootViewController.swift in Sources */,
 				07E472E11E5D912A003AB89A /* FeedBackViewController.swift in Sources */,
 				07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */,
 				07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */,
 				07F4DDAC1E47037500B0C98D /* Extension.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
+				07E472E61E630542003AB89A /* ShootViewController.swift in Sources */,
 				07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */,
 				0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */,
 				07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */,

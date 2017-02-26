@@ -34,7 +34,11 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-    <key>UIViewControllerBasedStatusBarAppearance</key>
-    <false/>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+	<key>NSCameraUsageDescription</key>
+	<string>访问相机以发布美图</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>访问相册获取更多图片</string>
 </dict>
 </plist>
