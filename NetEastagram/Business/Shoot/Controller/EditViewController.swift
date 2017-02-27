@@ -147,6 +147,7 @@ class EditViewController: BaseViewController, UIScrollViewDelegate {
         let res = UIImageView(frame: CGRect(x: 0, y: 23, width: Constants.SCREEN_WIDTH, height: Constants.SCREEN_WIDTH*3/4.0))
         res.backgroundColor = Constants.LIGHT_GRAY_COLOR
         res.image = UIImage(named: "demo-image")
+        res.contentMode = .scaleAspectFit
         return res
     }
     

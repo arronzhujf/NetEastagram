@@ -9,8 +9,8 @@
 import UIKit
 import AVFoundation
 
-class ShootViewController: BaseViewController {
-    private static let previewHeightRatio: CGFloat = (Constants.SCREEN_WIDTH*3/4.0)/Constants.SCREEN_HEIGHT
+class ShootViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    private static let previewHeightRatio: CGFloat = 4 / 7.0
     
     private var session: AVCaptureSession
     private var videoInput: AVCaptureDeviceInput? = nil
@@ -107,6 +107,12 @@ class ShootViewController: BaseViewController {
         backView.layer.addSublayer(previewLayer)
     }
     
+    private func show(image: UIImage) {
+        let editVC = EditViewController()
+        editVC.image = image
+        present(UINavigationController(rootViewController: editVC), animated: true, completion: nil)
+    }
+    
     //MARK: - action
     @objc func shootBtnClick(_ sender: ImageTopLabelBottomButton) {
         if let stillImageConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
@@ -116,9 +122,7 @@ class ShootViewController: BaseViewController {
                 let jpegData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
                 if let jpegData = jpegData, var image = UIImage(data: jpegData)?.fixOrientation() {
                     image = image.cutImageByCoornidate(topLeft: CGPoint(x: 0, y: (1-ShootViewController.previewHeightRatio)/2.0), bottomRight: CGPoint(x: 1, y: 0.5+ShootViewController.previewHeightRatio/2.0))
-                    let editVC = EditViewController()
-                    editVC.image = image
-                    self?.present(UINavigationController(rootViewController: editVC), animated: true, completion: nil)
+                    self?.show(image: image)
                 }
             }
             
@@ -126,7 +130,23 @@ class ShootViewController: BaseViewController {
     }
     
     @objc func albumBtnClick(_ sender: ImageTopLabelBottomButton) {
-        present(UINavigationController(rootViewController: EditViewController()), animated: true, completion: nil)
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.sourceType = .photoLibrary
+        imagePickerVC.delegate = self
+        present(imagePickerVC, animated: true, completion: nil)
+    }
+    
+    //MARK: - delegate
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let pickImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        navigationController?.dismiss(animated: true, completion: { [weak self] in
+            self?.show(image: pickImage)
+        })
+        
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        navigationController?.dismiss(animated: true, completion: nil)
     }
 
 }
