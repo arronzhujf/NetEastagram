@@ -111,10 +111,10 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
             cell.content.text = Constants.POST
         case 1:
             cell.icon.image = #imageLiteral(resourceName: "me-mark")
-            cell.content.text = Constants.MARK
+            cell.content.text = Constants.MY_MARK
         case 2:
             cell.icon.image = #imageLiteral(resourceName: "me-favorite")
-            cell.content.text = Constants.FAVORITE
+            cell.content.text = Constants.MY_FAVORITE
         case 3:
             cell.icon.image = #imageLiteral(resourceName: "me-invite")
             cell.content.text = Constants.INVITE

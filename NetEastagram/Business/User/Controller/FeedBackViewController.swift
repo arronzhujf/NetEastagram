@@ -24,15 +24,14 @@ class FeedBackViewController: BaseViewController, UITextViewDelegate {
     
     //MARK: - private
     private func initInternal() {
-        view.backgroundColor = .white
         navigationItem.title = Constants.FEEDBACK
         let headLabel = UILabel()
         headLabel.text = Constants.FEEDBACK_HEAD_TEXT
-        headLabel.textColor = UIColor(netHex: 0x999999)
+        headLabel.textColor = Constants.TEXT_GRAY_COLOR
         headLabel.font = UIFont.systemFont(ofSize: 13.0)
         
         adviseText = UITextView()
-        adviseText.layer.borderColor = UIColor(netHex: 0x999999).cgColor
+        adviseText.layer.borderColor = Constants.TEXT_GRAY_COLOR.cgColor
         adviseText.layer.borderWidth = 1.0
         adviseText.layer.cornerRadius = 5.0
         adviseText.delegate = self

@@ -39,11 +39,11 @@ class ShootViewController: BaseViewController {
     //MARK: - lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInternal()
+        initInternal()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         session.startRunning()
     }
     
@@ -53,8 +53,8 @@ class ShootViewController: BaseViewController {
     }
     
     //MARK: - private
-    private func setInternal() {
-        customBarTileViewWith(image: UIImage(named: "shoot-bar-icon"), title: Constants.SHOOT_TITLE)
+    private func initInternal() {
+        customBarTileViewWith(image: UIImage(named: "shoot-bar-icon"), title: Constants.POST)
         backView.frame = CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH, height: Constants.SCREEN_HEIGHT * ShootViewController.previewHeightRatio)
         backView.backgroundColor = .gray
         backView.layer.masksToBounds = true
@@ -63,14 +63,16 @@ class ShootViewController: BaseViewController {
         shootBtn.setImage(UIImage(named: "shoot"), for: .normal)
         shootBtn.setImage(UIImage(named: "shoot-light"), for: .highlighted)
         shootBtn.setTitle(Constants.SHOOT, for: .normal)
-        shootBtn.setTitleColor(Constants.GRAY_COLOR, for: .normal)
+        shootBtn.setTitleColor(Constants.TEXT_GRAY_COLOR, for: .normal)
         shootBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18.0)
-        
+        shootBtn.addTarget(self, action: #selector(shootBtnClick(_:)), for: .touchUpInside)
+
         albumBtn.setImage(UIImage(named: "shoot-album"), for: .normal)
         albumBtn.setImage(UIImage(named: "shoot-album-light"), for: .highlighted)
         albumBtn.setTitle(Constants.ALBUM, for: .normal)
-        albumBtn.setTitleColor(Constants.GRAY_COLOR, for: .normal)
+        albumBtn.setTitleColor(Constants.TEXT_GRAY_COLOR, for: .normal)
         albumBtn.titleLabel?.font = UIFont.systemFont(ofSize: 18.0)
+        albumBtn.addTarget(self, action: #selector(albumBtnClick(_:)), for: .touchUpInside)
 
         view.addSubview(shootBtn)
         view.addSubview(albumBtn)
@@ -87,7 +89,7 @@ class ShootViewController: BaseViewController {
             make.right.equalToSuperview().offset(-72.0)
         }
         
-//        setAVCaptureSession()
+        setAVCaptureSession()
     }
     
     private func setAVCaptureSession() {
@@ -103,6 +105,28 @@ class ShootViewController: BaseViewController {
         previewLayer.videoGravity = AVLayerVideoGravityResizeAspectFill
         previewLayer.frame = backView.frame
         backView.layer.addSublayer(previewLayer)
+    }
+    
+    //MARK: - action
+    @objc func shootBtnClick(_ sender: ImageTopLabelBottomButton) {
+        if let stillImageConnection = stillImageOutput.connection(withMediaType: AVMediaTypeVideo) {
+            stillImageConnection.videoScaleAndCropFactor = 1.0
+            stillImageOutput.captureStillImageAsynchronously(from: stillImageConnection) { [weak self] (imageDataSampleBuffer, error) in
+                guard let imageDataSampleBuffer = imageDataSampleBuffer, error == nil else { return }
+                let jpegData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(imageDataSampleBuffer)
+                if let jpegData = jpegData, var image = UIImage(data: jpegData)?.fixOrientation() {
+                    image = image.cutImageByCoornidate(topLeft: CGPoint(x: 0, y: (1-ShootViewController.previewHeightRatio)/2.0), bottomRight: CGPoint(x: 1, y: 0.5+ShootViewController.previewHeightRatio/2.0))
+                    let editVC = EditViewController()
+                    editVC.image = image
+                    self?.present(UINavigationController(rootViewController: editVC), animated: true, completion: nil)
+                }
+            }
+            
+        }
+    }
+    
+    @objc func albumBtnClick(_ sender: ImageTopLabelBottomButton) {
+        present(UINavigationController(rootViewController: EditViewController()), animated: true, completion: nil)
     }
 
 }

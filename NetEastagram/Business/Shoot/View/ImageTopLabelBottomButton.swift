@@ -9,6 +9,7 @@
 import UIKit
 
 class ImageTopLabelBottomButton: UIButton {
+    public var interval: CGFloat = 0
 
     override func layoutSubviews() {
         guard let imageView = imageView, let titleLabel = titleLabel else { return }
@@ -23,7 +24,7 @@ class ImageTopLabelBottomButton: UIButton {
         //Center text
         var newFrame = titleLabel.frame
         newFrame.origin.x = 0
-        newFrame.origin.y = imageView.height
+        newFrame.origin.y = imageView.height + interval
         newFrame.size.width = width
         newFrame.size.height = height - newFrame.origin.y
         titleLabel.frame = newFrame

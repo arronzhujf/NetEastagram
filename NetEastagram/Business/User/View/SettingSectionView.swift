@@ -37,7 +37,7 @@ class SettingSectionView: UIView {
     //MARK: - private
     private func initInternal() {
         addTouchEvent()
-        title.textColor = Constants.GRAY_COLOR
+        title.textColor = Constants.TEXT_GRAY_COLOR
         title.font = UIFont.systemFont(ofSize: 15.0)
         addSubview(title)
         title.snp.makeConstraints { (make) in
@@ -45,7 +45,7 @@ class SettingSectionView: UIView {
             make.left.equalToSuperview().offset(24)
         }
         let bottomLine = UIView()
-        bottomLine.backgroundColor = Constants.GRAY_COLOR
+        bottomLine.backgroundColor = Constants.LIGHT_GRAY_COLOR
         addSubview(bottomLine)
         bottomLine.snp.makeConstraints { (make) in
             make.left.bottom.right.equalToSuperview()
@@ -53,7 +53,7 @@ class SettingSectionView: UIView {
         }
         
         if type == .LabelType {
-            nameLabel.textColor = Constants.GRAY_COLOR
+            nameLabel.textColor = Constants.TEXT_GRAY_COLOR
             nameLabel.font = UIFont.systemFont(ofSize: 15.0)
             addSubview(nameLabel)
             let arrow = UIImageView(image: #imageLiteral(resourceName: "me-arrow"))

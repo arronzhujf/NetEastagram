@@ -120,7 +120,7 @@ class UserLoginedHeaderView: UIView {
     private func createNameLabel() -> UILabel {
         let res = UILabel()
         res.text = "test1992"
-        res.textColor = Constants.GRAY_COLOR
+        res.textColor = Constants.TEXT_GRAY_COLOR
         res.font = UIFont.systemFont(ofSize: 13)
         return res
     }

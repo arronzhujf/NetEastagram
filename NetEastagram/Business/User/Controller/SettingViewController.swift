@@ -23,7 +23,6 @@ class SettingViewController: BaseViewController, SettingSectionViewDelegate {
     //MARK: - private
     private func initInternal() {
         navigationItem.title = Constants.SET
-        view.backgroundColor = .white
         var rect = CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH, height: 40)
         let modifyNameSection = SettingSectionView(frame: rect, type: .LabelType)
         modifyNameSection.title.text = Constants.MODITY_NAME
