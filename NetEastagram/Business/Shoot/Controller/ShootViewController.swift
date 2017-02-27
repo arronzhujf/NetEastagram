@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class ShootViewController: BaseViewController {
-    private static let previewHeightRatio: CGFloat = 4 / 7.0
+    private static let previewHeightRatio: CGFloat = (Constants.SCREEN_WIDTH*3/4.0)/Constants.SCREEN_HEIGHT
     
     private var session: AVCaptureSession
     private var videoInput: AVCaptureDeviceInput? = nil

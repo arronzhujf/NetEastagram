@@ -14,52 +14,45 @@ enum EditInfoViewType {
     case verticalType
 }
 
-class EditInfoView: UIView {
+class EditInfoView: UIView, UITextFieldDelegate, UITextViewDelegate {
     public var type: EditInfoViewType = .horizonType {
         didSet {
             adjustView(by: type)
         }
     }
     public lazy var titleLabel: UILabel = self.createTitleLabel()
-    private lazy var horizonTextField: UITextField = self.createHorizonTextField()
-    private lazy var verticalTextView: UITextView = self.createverticalTextView()
-//    override init(frame: CGRect) {
-//        super.init(frame: frame)
-//        initInternal()
-//    }
-//    
-//    required init?(coder aDecoder: NSCoder) {
-//        return nil
-//    }
-//    
-//    //MARK: - private
-//    private func initInternal() {
-//    }
+    public lazy var horizonTextField: UITextField = self.createHorizonTextField()
+    public lazy var verticalTextView: UITextView = self.createverticalTextView()
     
     private func adjustView(by type: EditInfoViewType) {
         addSubview(titleLabel)
         if type == .horizonType {
             addSubview(horizonTextField)
-            let bottomLine = UIView(frame: CGRect(x: 0, y: height-1, width: width, height: 1))
+            let bottomLine = UIView()
             bottomLine.backgroundColor = Constants.LIGHT_GRAY_COLOR
             addSubview(bottomLine)
             
             titleLabel.snp.makeConstraints({ (make) in
                 make.left.centerY.equalToSuperview()
-//                make.width.equalTo(120)
+                make.width.equalTo(80)
             })
             horizonTextField.snp.makeConstraints({ (make) in
                 make.left.equalTo(titleLabel.snp.right)
                 make.centerY.right.equalToSuperview()
             })
+            bottomLine.snp.makeConstraints({ (make) in
+                make.left.right.bottom.equalToSuperview()
+                make.height.equalTo(1.0)
+            })
             
         } else if type == .verticalType {
             addSubview(verticalTextView)
             titleLabel.snp.makeConstraints({ (make) in
-                make.top.left.equalToSuperview()
+                make.left.equalToSuperview()
+                make.top.equalToSuperview().offset(10.0)
             })
             verticalTextView.snp.makeConstraints({ (make) in
-                make.top.equalTo(titleLabel.snp.bottom)
+                make.top.equalTo(titleLabel.snp.bottom).offset(10.0)
                 make.left.bottom.right.equalToSuperview()
             })
         }
@@ -75,18 +68,35 @@ class EditInfoView: UIView {
     
     private func createHorizonTextField() -> UITextField {
         let res = UITextField()
-        res.textColor = Constants.TEXT_GRAY_COLOR
         res.textAlignment = .left
         res.font = UIFont.systemFont(ofSize: 16.0)
+        res.delegate = self
+        res.clearButtonMode = .whileEditing
         return res
     }
     
     private func createverticalTextView() -> UITextView {
         let res = UITextView()
         res.layer.borderColor = Constants.TEXT_GRAY_COLOR.cgColor
+        res.font = UIFont.systemFont(ofSize: 16.0)
         res.layer.borderWidth = 1.0
         res.layer.cornerRadius = 5.0
+        res.delegate = self
         return res
+    }
+    
+    //MARK: - delegate    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if text == "\n" {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
     
 }

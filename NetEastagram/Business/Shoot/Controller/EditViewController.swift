@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditViewController: BaseViewController {
+class EditViewController: BaseViewController, UIScrollViewDelegate {
     public var image: UIImage? = nil
     private lazy var scrollView: UIScrollView = self.createScrollView()
     private lazy var headImageView: UIImageView = self.createHeadImageView()
@@ -34,11 +34,15 @@ class EditViewController: BaseViewController {
     //MARK: - life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+
         initInternal()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        shootCityCell.horizonTextField.becomeFirstResponder()
         scrollView.contentSize = CGSize(width: Constants.SCREEN_WIDTH, height: returnBtn.frame.maxY + 100)
     }
 
@@ -135,13 +139,33 @@ class EditViewController: BaseViewController {
         res.contentSize = CGSize(width: Constants.SCREEN_WIDTH, height: Constants.SCREEN_HEIGHT*2)
         res.showsHorizontalScrollIndicator = false
         res.showsVerticalScrollIndicator = false
+        res.delegate = self
         return res
     }
     
     private func createHeadImageView() -> UIImageView {
-        let res = UIImageView(frame: CGRect(x: 0, y: 23, width: Constants.SCREEN_WIDTH, height: 257))
+        let res = UIImageView(frame: CGRect(x: 0, y: 23, width: Constants.SCREEN_WIDTH, height: Constants.SCREEN_WIDTH*3/4.0))
         res.backgroundColor = Constants.LIGHT_GRAY_COLOR
         res.image = UIImage(named: "demo-image")
         return res
+    }
+    
+    //MARK: - scrollview delegate
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        view.endEditing(true)
+    }
+    
+    //MARK: - keyboard notification
+    @objc private func keyboardWillShow(notification: NSNotification) {
+        guard let keyboardFrameValue = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue, scrollView.contentInset == UIEdgeInsets.zero else { return }
+        let keyboardFrame = self.view.convert(keyboardFrameValue.cgRectValue, from: nil)
+        var inset = scrollView.contentInset
+        inset.top-=keyboardFrame.height
+        inset.bottom+=keyboardFrame.height
+        scrollView.contentInset = inset
+    }
+    
+    @objc private func keyboardWillHide() {
+        scrollView.contentInset = UIEdgeInsets.zero
     }
 }
