@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		071ED1F91E63FA4B005ADE44 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED1F81E63FA4B005ADE44 /* EditInfoView.swift */; };
+		071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED2001E64F6F7005ADE44 /* SearchViewController.swift */; };
 		0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3C81E489045006CB4C4 /* SettingViewController.swift */; };
 		0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
@@ -23,7 +24,6 @@
 		07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */; };
 		07E472EA1E63CEC0003AB89A /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E91E63CEC0003AB89A /* EditViewController.swift */; };
 		07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD941E41A72A00B0C98D /* HomeViewController.swift */; };
-		07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD961E41A82000B0C98D /* SearchViewController.swift */; };
 		07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */; };
 		07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA01E45C19B00B0C98D /* Constants.swift */; };
 		07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA51E46E53C00B0C98D /* UserViewController.swift */; };
@@ -54,6 +54,7 @@
 /* Begin PBXFileReference section */
 		02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.release.xcconfig"; sourceTree = "<group>"; };
 		071ED1F81E63FA4B005ADE44 /* EditInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditInfoView.swift; path = Business/Shoot/View/EditInfoView.swift; sourceTree = "<group>"; };
+		071ED2001E64F6F7005ADE44 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Business/Search/Controller/SearchViewController.swift; sourceTree = "<group>"; };
 		0735A3C81E489045006CB4C4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Business/User/Controller/SettingViewController.swift; sourceTree = "<group>"; };
 		0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingSectionView.swift; path = Business/User/View/SettingSectionView.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +77,6 @@
 		07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTopLabelBottomButton.swift; path = Business/Shoot/View/ImageTopLabelBottomButton.swift; sourceTree = "<group>"; };
 		07E472E91E63CEC0003AB89A /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = Business/Shoot/Controller/EditViewController.swift; sourceTree = "<group>"; };
 		07F4DD941E41A72A00B0C98D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Business/Homepage/HomeViewController.swift; sourceTree = "<group>"; };
-		07F4DD961E41A82000B0C98D /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Business/Search/SearchViewController.swift; sourceTree = "<group>"; };
 		07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Main/BaseViewController.swift; sourceTree = "<group>"; };
 		07F4DDA01E45C19B00B0C98D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Util/Constants.swift; sourceTree = "<group>"; };
 		07F4DDA51E46E53C00B0C98D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Business/User/Controller/UserViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +114,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		071ED1FA1E64F665005ADE44 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				071ED2001E64F6F7005ADE44 /* SearchViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		071ED1FB1E64F678005ADE44 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		071ED1FC1E64F67F005ADE44 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		073C6FBF1E1766C200A5B56E /* Common */ = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +249,9 @@
 		07C59FAD1E178A0B00A44F97 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				07F4DD961E41A82000B0C98D /* SearchViewController.swift */,
+				071ED1FC1E64F67F005ADE44 /* Model */,
+				071ED1FB1E64F678005ADE44 /* View */,
+				071ED1FA1E64F665005ADE44 /* Controller */,
 			);
 			name = Search;
 			sourceTree = "<group>";
@@ -512,7 +536,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07F4DD971E41A82000B0C98D /* SearchViewController.swift in Sources */,
 				07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */,
 				071ED1F91E63FA4B005ADE44 /* EditInfoView.swift in Sources */,
 				07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */,
@@ -525,6 +548,7 @@
 				07C59FB41E178C2600A44F97 /* ViewController.swift in Sources */,
 				07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */,
 				07F4DDAC1E47037500B0C98D /* Extension.swift in Sources */,
+				071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 				07E472E61E630542003AB89A /* ShootViewController.swift in Sources */,
 				07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */,

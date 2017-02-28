@@ -139,9 +139,9 @@ class ShootViewController: BaseViewController, UIImagePickerControllerDelegate, 
     //MARK: - delegate
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let pickImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        navigationController?.dismiss(animated: true, completion: { [weak self] in
+        navigationController?.dismiss(animated: true) { [weak self] in
             self?.show(image: pickImage)
-        })
+        }
         
     }
     
