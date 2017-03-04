@@ -37,7 +37,7 @@ class ScenicSpotCell: UITableViewCell {
     
     //MARK : private
     func customInternal() {
-        contentView.backgroundColor = Constants.LIGHT_GRAY_COLOR
+        contentView.backgroundColor = UIColor(netHex: 0xe7e7e7)
         headLabel.font = UIFont.systemFont(ofSize: 18.0)
         headLabel.textColor = .white
         bottomContainer.backgroundColor = .white
