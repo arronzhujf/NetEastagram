@@ -1,0 +1,90 @@
+//
+//  ScenicSpotCell.swift
+//  NetEastagram
+//
+//  Created by JianfengZhu on 2017/3/4.
+//  Copyright © 2017年 JianfengZhu. All rights reserved.
+//
+
+import UIKit
+import SnapKit
+
+class ScenicSpotCell: UITableViewCell {
+    public var scenicSpotModel: ScenicSpot? {
+        didSet {
+            configCellWith(model: scenicSpotModel)
+        }
+    }
+    public var headImage: UIImageView
+    public var headLabel: UILabel
+    public var bottomContainer: UIView
+    public var timeLabel: UILabel
+    public var bottomLabel: UILabel
+    
+    override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
+        headImage = UIImageView()
+        headLabel = UILabel()
+        bottomContainer = UIView()
+        timeLabel = UILabel()
+        bottomLabel = UILabel()
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        self.customInternal()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        return nil
+    }
+    
+    //MARK : private
+    func customInternal() {
+        contentView.backgroundColor = Constants.LIGHT_GRAY_COLOR
+        headLabel.font = UIFont.systemFont(ofSize: 18.0)
+        headLabel.textColor = .white
+        bottomContainer.backgroundColor = .white
+        timeLabel.font = UIFont.systemFont(ofSize: 13.0)
+        timeLabel.textColor = UIColor(netHex: 0xfeae53)
+        bottomLabel.font = UIFont.systemFont(ofSize: 12.0)
+        bottomLabel.textColor = Constants.LIGHT_GRAY_COLOR
+        contentView.addSubview(headImage)
+        contentView.addSubview(headLabel)
+        contentView.addSubview(bottomContainer)
+        bottomContainer.addSubview(timeLabel)
+        bottomContainer.addSubview(bottomLabel)
+        
+        headImage.snp.makeConstraints { (make) in
+            make.left.top.right.equalToSuperview()
+            make.bottom.equalTo(bottomContainer.snp.top)
+        }
+        headLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(12.5)
+            make.bottom.equalTo(headImage).offset(-12.5)
+        }
+        bottomContainer.snp.makeConstraints { (make) in
+            make.left.bottom.right.equalToSuperview()
+            make.height.equalTo(74)
+        }
+        timeLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(13)
+            make.centerY.equalToSuperview().offset(-10)
+        }
+        bottomLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(timeLabel)
+            make.centerY.equalToSuperview().offset(10)
+        }
+    }
+    
+    func configCellWith(model: ScenicSpot?) {
+        guard let model = model else { return }
+        headImage.image = model.image
+        headLabel.text = model.chineseName
+        timeLabel.text = model.bestTime
+        bottomLabel.text = model.englishName
+    }
+
+    override func setSelected(_ selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+
+        // Configure the view for the selected state
+    }
+
+}

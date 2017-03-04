@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		071ED1F91E63FA4B005ADE44 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED1F81E63FA4B005ADE44 /* EditInfoView.swift */; };
 		071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED2001E64F6F7005ADE44 /* SearchViewController.swift */; };
+		0734D0E01E6A6DA400CB7B19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0DF1E6A6DA400CB7B19 /* HomeViewController.swift */; };
+		0734D0E21E6A6E0C00CB7B19 /* ScenicSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0E11E6A6E0C00CB7B19 /* ScenicSpot.swift */; };
+		0734D0E41E6AA49600CB7B19 /* ScenicSpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */; };
 		0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3C81E489045006CB4C4 /* SettingViewController.swift */; };
 		0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
@@ -23,7 +26,6 @@
 		07E472E61E630542003AB89A /* ShootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E51E630542003AB89A /* ShootViewController.swift */; };
 		07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */; };
 		07E472EA1E63CEC0003AB89A /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E472E91E63CEC0003AB89A /* EditViewController.swift */; };
-		07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD941E41A72A00B0C98D /* HomeViewController.swift */; };
 		07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */; };
 		07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA01E45C19B00B0C98D /* Constants.swift */; };
 		07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F4DDA51E46E53C00B0C98D /* UserViewController.swift */; };
@@ -55,6 +57,9 @@
 		02236EC5D20EE72992486D84 /* Pods-NetEastagram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetEastagram.release.xcconfig"; path = "Pods/Target Support Files/Pods-NetEastagram/Pods-NetEastagram.release.xcconfig"; sourceTree = "<group>"; };
 		071ED1F81E63FA4B005ADE44 /* EditInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditInfoView.swift; path = Business/Shoot/View/EditInfoView.swift; sourceTree = "<group>"; };
 		071ED2001E64F6F7005ADE44 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Business/Search/Controller/SearchViewController.swift; sourceTree = "<group>"; };
+		0734D0DF1E6A6DA400CB7B19 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Business/Homepage/Controller/HomeViewController.swift; sourceTree = "<group>"; };
+		0734D0E11E6A6E0C00CB7B19 /* ScenicSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpot.swift; path = Business/Homepage/Model/ScenicSpot.swift; sourceTree = "<group>"; };
+		0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpotCell.swift; path = Business/Homepage/View/ScenicSpotCell.swift; sourceTree = "<group>"; };
 		0735A3C81E489045006CB4C4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Business/User/Controller/SettingViewController.swift; sourceTree = "<group>"; };
 		0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingSectionView.swift; path = Business/User/View/SettingSectionView.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,7 +81,6 @@
 		07E472E51E630542003AB89A /* ShootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ShootViewController.swift; path = Business/Shoot/Controller/ShootViewController.swift; sourceTree = "<group>"; };
 		07E472E71E630567003AB89A /* ImageTopLabelBottomButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ImageTopLabelBottomButton.swift; path = Business/Shoot/View/ImageTopLabelBottomButton.swift; sourceTree = "<group>"; };
 		07E472E91E63CEC0003AB89A /* EditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditViewController.swift; path = Business/Shoot/Controller/EditViewController.swift; sourceTree = "<group>"; };
-		07F4DD941E41A72A00B0C98D /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Business/Homepage/HomeViewController.swift; sourceTree = "<group>"; };
 		07F4DD9C1E4423CC00B0C98D /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BaseViewController.swift; path = Main/BaseViewController.swift; sourceTree = "<group>"; };
 		07F4DDA01E45C19B00B0C98D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Common/Util/Constants.swift; sourceTree = "<group>"; };
 		07F4DDA51E46E53C00B0C98D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserViewController.swift; path = Business/User/Controller/UserViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,30 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		0734D0DC1E6A6D7200CB7B19 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0734D0DF1E6A6DA400CB7B19 /* HomeViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0734D0DD1E6A6D8500CB7B19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0734D0E11E6A6E0C00CB7B19 /* ScenicSpot.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0734D0DE1E6A6D8E00CB7B19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		073C6FBF1E1766C200A5B56E /* Common */ = {
@@ -241,7 +269,9 @@
 		07C59FAC1E1789FD00A44F97 /* Homepage */ = {
 			isa = PBXGroup;
 			children = (
-				07F4DD941E41A72A00B0C98D /* HomeViewController.swift */,
+				0734D0DD1E6A6D8500CB7B19 /* Model */,
+				0734D0DE1E6A6D8E00CB7B19 /* View */,
+				0734D0DC1E6A6D7200CB7B19 /* Controller */,
 			);
 			name = Homepage;
 			sourceTree = "<group>";
@@ -539,8 +569,11 @@
 				07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */,
 				071ED1F91E63FA4B005ADE44 /* EditInfoView.swift in Sources */,
 				07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */,
+				0734D0E21E6A6E0C00CB7B19 /* ScenicSpot.swift in Sources */,
 				07F4DDA81E46EC4400B0C98D /* UserHeaderView.swift in Sources */,
 				0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */,
+				0734D0E41E6AA49600CB7B19 /* ScenicSpotCell.swift in Sources */,
+				0734D0E01E6A6DA400CB7B19 /* HomeViewController.swift in Sources */,
 				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,
 				07F4DDB21E4711FA00B0C98D /* UserTableViewCell.swift in Sources */,
 				07E472EA1E63CEC0003AB89A /* EditViewController.swift in Sources */,
@@ -551,7 +584,6 @@
 				071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 				07E472E61E630542003AB89A /* ShootViewController.swift in Sources */,
-				07F4DD951E41A72A00B0C98D /* HomeViewController.swift in Sources */,
 				0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */,
 				07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */,
 			);
