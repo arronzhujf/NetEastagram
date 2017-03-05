@@ -14,6 +14,7 @@
 		0734D0E41E6AA49600CB7B19 /* ScenicSpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */; };
 		0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3C81E489045006CB4C4 /* SettingViewController.swift */; };
 		0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */; };
+		07512A5D1E6AD5800050DD23 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A5C1E6AD5800050DD23 /* DetailViewController.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
 		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
@@ -62,6 +63,7 @@
 		0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpotCell.swift; path = Business/Homepage/View/ScenicSpotCell.swift; sourceTree = "<group>"; };
 		0735A3C81E489045006CB4C4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Business/User/Controller/SettingViewController.swift; sourceTree = "<group>"; };
 		0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingSectionView.swift; path = Business/User/View/SettingSectionView.swift; sourceTree = "<group>"; };
+		07512A5C1E6AD5800050DD23 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Business/Homepage/Controller/DetailViewController.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				0734D0DF1E6A6DA400CB7B19 /* HomeViewController.swift */,
+				07512A5C1E6AD5800050DD23 /* DetailViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -572,6 +575,7 @@
 				0734D0E21E6A6E0C00CB7B19 /* ScenicSpot.swift in Sources */,
 				07F4DDA81E46EC4400B0C98D /* UserHeaderView.swift in Sources */,
 				0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */,
+				07512A5D1E6AD5800050DD23 /* DetailViewController.swift in Sources */,
 				0734D0E41E6AA49600CB7B19 /* ScenicSpotCell.swift in Sources */,
 				0734D0E01E6A6DA400CB7B19 /* HomeViewController.swift in Sources */,
 				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,

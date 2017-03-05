@@ -9,7 +9,7 @@
 import UIKit
 
 class ScenicSpot: NSObject, NSCoding {
-    public var sharedPeopleID: String
+    public var userName: String
     public var chineseName: String
     public var englishName: String
     public var bestTime: String
@@ -17,8 +17,8 @@ class ScenicSpot: NSObject, NSCoding {
     public var location: String
     public var recommendReason: String
     
-    init(sharedPeopleID: String, chineseName: String, englishName: String, bestTime: String, image: UIImage, location: String, recommendReason: String) {
-        self.sharedPeopleID = sharedPeopleID
+    init(userName: String, chineseName: String, englishName: String, bestTime: String, image: UIImage, location: String, recommendReason: String) {
+        self.userName = userName
         self.chineseName = chineseName
         self.englishName = englishName
         self.bestTime = bestTime
@@ -30,7 +30,7 @@ class ScenicSpot: NSObject, NSCoding {
     
     //MARK: - nscoding
     required init?(coder aDecoder: NSCoder) {
-        self.sharedPeopleID = aDecoder.decodeObject(forKey: "sharedPeopleID") as? String ?? ""
+        self.userName = aDecoder.decodeObject(forKey: "userName") as? String ?? ""
         self.chineseName = aDecoder.decodeObject(forKey: "chineseName") as? String ?? ""
         self.englishName = aDecoder.decodeObject(forKey: "englishName") as? String ?? ""
         self.bestTime = aDecoder.decodeObject(forKey: "bestTime") as? String ?? ""
@@ -40,7 +40,7 @@ class ScenicSpot: NSObject, NSCoding {
     }
     
     func encode(with aCoder: NSCoder) {
-        aCoder.encode(sharedPeopleID, forKey: "sharedPeopleID")
+        aCoder.encode(userName, forKey: "userName")
         aCoder.encode(chineseName, forKey: "chineseName")
         aCoder.encode(englishName, forKey: "englishName")
         aCoder.encode(bestTime, forKey: "bestTime")

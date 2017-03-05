@@ -11,6 +11,7 @@ import UIKit
 class BaseViewController: UIViewController {
     public var tabBarHeight: CGFloat = 0
     public var naviBarHeight: CGFloat = 0
+    public var statusBarHeight: CGFloat = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,7 @@ class BaseViewController: UIViewController {
         automaticallyAdjustsScrollViewInsets = false
         tabBarHeight = tabBarController?.tabBar.height ?? 0
         naviBarHeight = navigationController?.navigationBar.height ?? 0
+        statusBarHeight = UIApplication.shared.statusBarFrame.height
         let backItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
     }

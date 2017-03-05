@@ -25,7 +25,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         customBarTileViewWith(image: UIImage(named: "home-bar-icon"), title: Constants.HOME_TITLE)
         view.backgroundColor = UIColor(netHex: 0xe7e7e7)
         tableView.register(ScenicSpotCell.self, forCellReuseIdentifier: HomeViewController.cellIdentifier)
-        let spot = ScenicSpot(sharedPeopleID: "ID", chineseName: "景点", englishName: "spot", bestTime: "2017.3.12", image: UIImage(named: "pho-1")!, location: "稻城亚丁", recommendReason: "无脑安利")
+        let spot = ScenicSpot(userName: "ID", chineseName: "景点", englishName: "spot", bestTime: "2017.3.12", image: UIImage(named: "pho-1")!, location: "稻城亚丁", recommendReason: "无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利")
         dataSource.append(spot)
         dataSource.append(spot)
         view.addSubview(tableView)
@@ -33,7 +33,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     
     //MARK: - lazy init
     private func creatTableView() -> UITableView {
-         let res = UITableView(frame: CGRect(x: margin, y: 0, width: Constants.SCREEN_WIDTH - 2*margin, height: Constants.SCREEN_HEIGHT - tabBarHeight), style: .grouped)
+         let res = UITableView(frame: CGRect(x: margin, y: 0, width: Constants.SCREEN_WIDTH - 2*margin, height: Constants.SCREEN_HEIGHT-statusBarHeight-naviBarHeight-tabBarHeight), style: .grouped)
         res.backgroundColor = UIColor(netHex: 0xe7e7e7)
         res.delegate = self
         res.dataSource = self
@@ -73,7 +73,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 13
+        return 10
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -86,6 +86,14 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: tableView.width, height: 14))
         footer.backgroundColor = view.backgroundColor
         return footer
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let navigationController = navigationController else { return }
+        let detailViewController = DetailViewController(nibName: nil, bundle: nil)
+        detailViewController.model = dataSource[indexPath.section]
+        navigationController.pushViewController(detailViewController, animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

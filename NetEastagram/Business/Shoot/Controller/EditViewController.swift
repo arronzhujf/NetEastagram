@@ -43,7 +43,11 @@ class EditViewController: BaseViewController, UIScrollViewDelegate {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         shootCityCell.horizonTextField.becomeFirstResponder()
-        scrollView.contentSize = CGSize(width: Constants.SCREEN_WIDTH, height: returnBtn.frame.maxY + 100)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize.height = max(returnBtn.frame.maxY + 100, scrollView.height+1)
     }
 
     //MARK: - private

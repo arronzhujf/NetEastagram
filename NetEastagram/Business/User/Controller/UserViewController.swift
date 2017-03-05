@@ -72,6 +72,7 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
+    //MARK: - action
     @objc func tapOnSetButton() {
         guard let navigationController = navigationController  else {
             return

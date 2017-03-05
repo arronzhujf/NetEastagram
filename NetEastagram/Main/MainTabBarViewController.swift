@@ -17,6 +17,7 @@ class MainTabBarViewController: UITabBarController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         initTabbar()
     }
 
