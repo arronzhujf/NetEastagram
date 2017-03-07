@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class DetailViewController: BaseViewController {
-    public var model: ScenicSpot?
+    public var model: ScenicSpotModel?
     private lazy var scrollView: UIScrollView = self.createScrollView()
     private lazy var bottomBar: UIView = self.createBottomBar()
     private lazy var topBar: UIView = self.createTopBar()

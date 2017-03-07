@@ -10,11 +10,14 @@
 		071ED1F91E63FA4B005ADE44 /* EditInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED1F81E63FA4B005ADE44 /* EditInfoView.swift */; };
 		071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071ED2001E64F6F7005ADE44 /* SearchViewController.swift */; };
 		0734D0E01E6A6DA400CB7B19 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0DF1E6A6DA400CB7B19 /* HomeViewController.swift */; };
-		0734D0E21E6A6E0C00CB7B19 /* ScenicSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0E11E6A6E0C00CB7B19 /* ScenicSpot.swift */; };
+		0734D0E21E6A6E0C00CB7B19 /* ScenicSpotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0E11E6A6E0C00CB7B19 /* ScenicSpotModel.swift */; };
 		0734D0E41E6AA49600CB7B19 /* ScenicSpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */; };
 		0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3C81E489045006CB4C4 /* SettingViewController.swift */; };
 		0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */; };
 		07512A5D1E6AD5800050DD23 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A5C1E6AD5800050DD23 /* DetailViewController.swift */; };
+		07512A601E6EB5180050DD23 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A5F1E6EB5180050DD23 /* NetworkService.swift */; };
+		07512A621E6EB85B0050DD23 /* PhotoListRequestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A611E6EB85B0050DD23 /* PhotoListRequestModel.swift */; };
+		07512A641E6EB87E0050DD23 /* PhotoListResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A631E6EB87E0050DD23 /* PhotoListResponseModel.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
 		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
@@ -59,11 +62,14 @@
 		071ED1F81E63FA4B005ADE44 /* EditInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditInfoView.swift; path = Business/Shoot/View/EditInfoView.swift; sourceTree = "<group>"; };
 		071ED2001E64F6F7005ADE44 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = Business/Search/Controller/SearchViewController.swift; sourceTree = "<group>"; };
 		0734D0DF1E6A6DA400CB7B19 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeViewController.swift; path = Business/Homepage/Controller/HomeViewController.swift; sourceTree = "<group>"; };
-		0734D0E11E6A6E0C00CB7B19 /* ScenicSpot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpot.swift; path = Business/Homepage/Model/ScenicSpot.swift; sourceTree = "<group>"; };
+		0734D0E11E6A6E0C00CB7B19 /* ScenicSpotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpotModel.swift; path = Business/Homepage/Model/ScenicSpotModel.swift; sourceTree = "<group>"; };
 		0734D0E31E6AA49600CB7B19 /* ScenicSpotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpotCell.swift; path = Business/Homepage/View/ScenicSpotCell.swift; sourceTree = "<group>"; };
 		0735A3C81E489045006CB4C4 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingViewController.swift; path = Business/User/Controller/SettingViewController.swift; sourceTree = "<group>"; };
 		0735A3CA1E489CA3006CB4C4 /* SettingSectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingSectionView.swift; path = Business/User/View/SettingSectionView.swift; sourceTree = "<group>"; };
 		07512A5C1E6AD5800050DD23 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailViewController.swift; path = Business/Homepage/Controller/DetailViewController.swift; sourceTree = "<group>"; };
+		07512A5F1E6EB5180050DD23 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkService.swift; path = Common/Network/NetworkService.swift; sourceTree = "<group>"; };
+		07512A611E6EB85B0050DD23 /* PhotoListRequestModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListRequestModel.swift; path = Common/Network/PhotoListRequestModel.swift; sourceTree = "<group>"; };
+		07512A631E6EB87E0050DD23 /* PhotoListResponseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListResponseModel.swift; path = Common/Network/PhotoListResponseModel.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -154,7 +160,7 @@
 		0734D0DD1E6A6D8500CB7B19 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0734D0E11E6A6E0C00CB7B19 /* ScenicSpot.swift */,
+				0734D0E11E6A6E0C00CB7B19 /* ScenicSpotModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -180,6 +186,9 @@
 		07512A5E1E6D64160050DD23 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				07512A5F1E6EB5180050DD23 /* NetworkService.swift */,
+				07512A611E6EB85B0050DD23 /* PhotoListRequestModel.swift */,
+				07512A631E6EB87E0050DD23 /* PhotoListResponseModel.swift */,
 			);
 			name = Network;
 			sourceTree = "<group>";
@@ -577,13 +586,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07512A601E6EB5180050DD23 /* NetworkService.swift in Sources */,
 				07E472E81E630567003AB89A /* ImageTopLabelBottomButton.swift in Sources */,
 				071ED1F91E63FA4B005ADE44 /* EditInfoView.swift in Sources */,
 				07F4DDA61E46E53C00B0C98D /* UserViewController.swift in Sources */,
-				0734D0E21E6A6E0C00CB7B19 /* ScenicSpot.swift in Sources */,
+				0734D0E21E6A6E0C00CB7B19 /* ScenicSpotModel.swift in Sources */,
 				07F4DDA81E46EC4400B0C98D /* UserHeaderView.swift in Sources */,
 				0735A3C91E489045006CB4C4 /* SettingViewController.swift in Sources */,
 				07512A5D1E6AD5800050DD23 /* DetailViewController.swift in Sources */,
+				07512A621E6EB85B0050DD23 /* PhotoListRequestModel.swift in Sources */,
 				0734D0E41E6AA49600CB7B19 /* ScenicSpotCell.swift in Sources */,
 				0734D0E01E6A6DA400CB7B19 /* HomeViewController.swift in Sources */,
 				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,
@@ -596,6 +607,7 @@
 				071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 				07E472E61E630542003AB89A /* ShootViewController.swift in Sources */,
+				07512A641E6EB87E0050DD23 /* PhotoListResponseModel.swift in Sources */,
 				0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */,
 				07F4DDA11E45C19B00B0C98D /* Constants.swift in Sources */,
 			);

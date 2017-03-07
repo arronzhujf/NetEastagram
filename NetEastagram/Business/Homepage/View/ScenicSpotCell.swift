@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 
 class ScenicSpotCell: UITableViewCell {
-    public var scenicSpotModel: ScenicSpot? {
+    public var scenicSpotModel: ScenicSpotModel? {
         didSet {
             configCellWith(model: scenicSpotModel)
         }
@@ -73,7 +73,7 @@ class ScenicSpotCell: UITableViewCell {
         }
     }
     
-    func configCellWith(model: ScenicSpot?) {
+    func configCellWith(model: ScenicSpotModel?) {
         guard let model = model else { return }
         headImage.image = model.image
         headLabel.text = model.chineseName

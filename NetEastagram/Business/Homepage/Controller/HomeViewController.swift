@@ -13,7 +13,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     public static let cellIdentifier = "cellIdentifier"
     public let margin: CGFloat = 8.5
     public lazy var tableView: UITableView = self.creatTableView()
-    public var dataSource: [ScenicSpot] = []
+    public var dataSource: [ScenicSpotModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         customBarTileViewWith(image: UIImage(named: "home-bar-icon"), title: Constants.HOME_TITLE)
         view.backgroundColor = UIColor(netHex: 0xe7e7e7)
         tableView.register(ScenicSpotCell.self, forCellReuseIdentifier: HomeViewController.cellIdentifier)
-        let spot = ScenicSpot(userName: "ID", chineseName: "景点", englishName: "spot", bestTime: "2017.3.12", image: UIImage(named: "pho-1")!, location: "稻城亚丁", recommendReason: "无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利")
+        let spot = ScenicSpotModel(userName: "ID", chineseName: "景点", englishName: "spot", bestTime: "2017.3.12", image: UIImage(named: "pho-1")!, location: "稻城亚丁", recommendReason: "无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利")
         dataSource.append(spot)
         dataSource.append(spot)
         view.addSubview(tableView)

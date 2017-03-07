@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ScenicSpot: NSObject, NSCoding {
+class ScenicSpotModel: NSObject, NSCoding {
     public var userName: String
     public var chineseName: String
     public var englishName: String
