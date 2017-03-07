@@ -13,7 +13,7 @@ class SearchViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        navigationItem.title = "Search"
+        navigationItem.title = Constants.SEARCH
     }
 
     override func didReceiveMemoryWarning() {

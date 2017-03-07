@@ -7,4 +7,5 @@ target 'NetEastagram' do
 	pod 'SnapKit', '~> 3.1.2'
 	pod 'HandyJSON', '~> 1.4.0'
 	pod 'MJRefresh'
+	pod 'Reachability'
 end

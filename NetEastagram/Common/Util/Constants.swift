@@ -21,6 +21,7 @@ struct Constants {
     static let HOME_TITLE = "热门"
     static let DETAILS = "详情"
     static let POST = "发布"
+    static let SEARCH = "搜索"
     static let RETURN = "返回"
     static let SHOOT = "拍照"
     static let ALBUM = "相册"

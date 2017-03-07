@@ -170,10 +170,18 @@
 		073C6FBF1E1766C200A5B56E /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				07512A5E1E6D64160050DD23 /* Network */,
 				07C59FAB1E1789A100A44F97 /* Model */,
 				07C59FAA1E17896700A44F97 /* Util */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		07512A5E1E6D64160050DD23 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Network;
 			sourceTree = "<group>";
 		};
 		07BD126D1E1682F300377C7A = {
