@@ -62,6 +62,7 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     private func updateUI(by isLogin: Bool) {
         if isLogin {
             let loginedHeaderView = UserLoginedHeaderView(frame: CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH, height: 185.0))
+            loginedHeaderView.nameLabel.text = SharedPreferences.shared().name
             userTableView.tableHeaderView = loginedHeaderView
             (setButton.customView as! UIButton).isEnabled = true
         } else {

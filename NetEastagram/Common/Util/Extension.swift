@@ -40,7 +40,7 @@ extension UIView {
 }
 
 extension UIImage {
-    /// Extension to fix orientation of an UIImage without EXIF
+    // Extension to fix orientation of an UIImage without EXIF
     func fixOrientation() -> UIImage {
         
         guard let cgImage = cgImage else { return self }

@@ -47,6 +47,7 @@ struct Constants {
     static let ADD_DESC = "添加描述:"
     
     //MARK: - data persistence
+    static let USER_INFO_KEY = "userInfoKey"
     static let IS_LOGIN_KEY = "isLoginKey"
     static let IS_SAVE_ORIGINAL_KEY = "isSaveOriginalKey"
     

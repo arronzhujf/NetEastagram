@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HandyJSON
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +34,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UIApplication.shared.statusBarStyle = .lightContent
         setStatusBarBackgroundColor(color: UIColor(netHex: 0x3b515c))
+        
+        //for test
+        if UserDefaults.standard.string(forKey: Constants.USER_INFO_KEY) == nil {
+            let user = UserModel.init(name: "arron", userID: 19920212)
+            UserDefaults.standard.set(user.toJSONString(), forKey: Constants.USER_INFO_KEY)
+        }
+        let userString = UserDefaults.standard.string(forKey: Constants.USER_INFO_KEY)
+        let model = UserModel.deserialize(from: userString)
+        SharedPreferences.shared().name = model?.name
+        SharedPreferences.shared().userID = model?.userID
+        
         return true
     }
 

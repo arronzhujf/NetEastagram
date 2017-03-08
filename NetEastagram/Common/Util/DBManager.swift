@@ -30,7 +30,7 @@ class DBManager: NSObject {
         return documentsFolder.path
     }
     
-     func executeUpdate(with sql: String, values: [Any]!) -> Bool {
+    fileprivate func executeUpdate(with sql: String, values: [Any]!) -> Bool {
         guard db.open() else { return false }
         var isUpdate = true
         do {
@@ -42,7 +42,7 @@ class DBManager: NSObject {
         return isUpdate
     }
     
-    func executeQuery(with sql: String, values: [Any]!) -> Array<[AnyHashable: Any]>? {
+    fileprivate func executeQuery(with sql: String, values: [Any]!) -> Array<[AnyHashable: Any]>? {
         var res = Array<[AnyHashable: Any]>()
         if !db.open() { return res }
         let resSet = try? db.executeQuery(sql, values: values)
@@ -56,18 +56,34 @@ class DBManager: NSObject {
         db.close()
         return res
     }
+}
+
+
+    //MARK: - user mark operation
+extension DBManager {
+    func isMarked(photoInfo model: PhotoDataModel, for userID: String) -> Bool {
+        guard let modelJSONString = model.toJSONString() else {
+            return false
+        }
+        var res = false
+        let query_sql = "SELECT * FROM user_photo WHERE userid=" + userID + "AND photo=" + modelJSONString
+        if let resArray = executeQuery(with: query_sql, values: nil), resArray.count > 0 {
+            res = true
+        }
+        return res
+
+    }
     
     func addMark(photoInfo model: PhotoDataModel, for userID: String) -> Bool {
         guard let modelJSONString = model.toJSONString() else {
             return false
         }
-        let query_sql = "SELECT * FROM user_photo WHERE userid=" + userID + "AND photo=" + modelJSONString
-        if let resArray = executeQuery(with: query_sql, values: nil), resArray.count > 0 {
+        if isMarked(photoInfo: model, for: userID) {
             return true
-        } else {
-            let insert_sql = "INSERT INTO user_photo (userid, photo) values (?, ?)"
-            return executeUpdate(with: insert_sql, values: [userID, modelJSONString])
         }
+        let insert_sql = "INSERT INTO user_photo (userid, photo) values (?, ?)"
+        return executeUpdate(with: insert_sql, values: [userID, modelJSONString])
+        
     }
     
     func cancelMark(photoInfo model: PhotoDataModel, for userID: String) -> Bool {
