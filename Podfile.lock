@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - HandyJSON (1.6.0)
   - MBProgressHUD (1.0.0)
   - MJRefresh (3.1.12)
@@ -25,6 +28,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - FMDB
   - HandyJSON (~> 1.6.0)
   - MBProgressHUD (~> 1.0.0)
   - MJRefresh
@@ -34,6 +38,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   HandyJSON: 573a148e2c649d108a8d6fbee1874c5c2d0822ca
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
@@ -41,6 +46,6 @@ SPEC CHECKSUMS:
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SnapKit: 12b24f569cb7c143acc9c22b9d91b23e7b1c84a2
 
-PODFILE CHECKSUM: 697f94a9f905843cfd46405d1bc545be829cdafe
+PODFILE CHECKSUM: 2de3fff7606452adb34c4b6ff6d50d2139981a05
 
 COCOAPODS: 1.1.1

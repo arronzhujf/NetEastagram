@@ -9,4 +9,5 @@ target 'NetEastagram' do
 	pod 'MJRefresh'
 	pod 'Reachability'
 	pod 'MBProgressHUD', '~> 1.0.0'
+	pod 'FMDB'
 end
