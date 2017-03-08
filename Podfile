@@ -8,4 +8,5 @@ target 'NetEastagram' do
 	pod 'HandyJSON', '~> 1.6.0'
 	pod 'MJRefresh'
 	pod 'Reachability'
+	pod 'MBProgressHUD', '~> 1.0.0'
 end
