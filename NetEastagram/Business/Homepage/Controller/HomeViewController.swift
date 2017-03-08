@@ -9,6 +9,7 @@
 import UIKit
 import SnapKit
 import MJRefresh
+import MBProgressHUD
 
 class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     public static let cellIdentifier = "cellIdentifier"
@@ -20,10 +21,13 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     private let header = MJRefreshNormalHeader()
     private let footer = MJRefreshAutoNormalFooter()
     
+    //progressHUD
+    private var hud: MBProgressHUD?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initInternal()
-        requestPhotos()
+        requestPhotos(withHud: true)
     }
     
     //MARK: - private
@@ -34,13 +38,20 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         view.addSubview(tableView)
     }
     
-    @objc private func requestPhotos() {
+    @objc private func requestPhotos(withHud show: Bool) {
+        if show {
+            hud = MBProgressHUD.showAdded(to: view, animated: true)
+            hud?.mode = .indeterminate
+        }
         let requestModel = PhotoListRequestModel(limit: 20, offset: 0)
         NetworkService.instance.requestPhotoList(with: requestModel, success: { [weak self] (photoList) in
             if let photoList = photoList {
                 self?.dataSource = photoList.photolist
                 self?.tableView.reloadData()
                 self?.header.endRefreshing()
+                if let hud = self?.hud {
+                    hud.hide(animated: true)
+                }
             }
         }, failure: nil)
     }
