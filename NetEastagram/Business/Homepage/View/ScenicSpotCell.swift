@@ -39,6 +39,7 @@ class ScenicSpotCell: UITableViewCell {
     //MARK : private
     func customInternal() {
         contentView.backgroundColor = UIColor(netHex: 0xe7e7e7)
+        
         headLabel.font = UIFont.systemFont(ofSize: 18.0)
         headLabel.textColor = .white
         bottomContainer.backgroundColor = .white
@@ -72,6 +73,15 @@ class ScenicSpotCell: UITableViewCell {
             make.left.equalTo(timeLabel)
             make.centerY.equalToSuperview().offset(10)
         }
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        //mask
+        let shapeLayer = CAShapeLayer()
+        let bezierPath = UIBezierPath(roundedRect: bounds.insetBy(dx: 0.0,dy: 2.0), cornerRadius: 5.0)
+        shapeLayer.path = bezierPath.cgPath
+        layer.mask = shapeLayer
     }
     
     func configCellWith(model: PhotoDataModel?) {

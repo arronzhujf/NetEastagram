@@ -62,10 +62,6 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.cellIdentifier, for: indexPath) as! ScenicSpotCell
         cell.photoDataModel = dataSource[indexPath.section]
-        let shapeLayer = CAShapeLayer()
-        let bezierPath = UIBezierPath(roundedRect: cell.bounds.insetBy(dx: 0.0,dy: 2.0), cornerRadius: 5.0)
-        shapeLayer.path = bezierPath.cgPath
-        cell.layer.mask = shapeLayer
         return cell
     }
     
