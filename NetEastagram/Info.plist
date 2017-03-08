@@ -40,5 +40,11 @@
 	<string>访问相机以发布美图</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>访问相册获取更多图片</string>
+    
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
 </dict>
 </plist>

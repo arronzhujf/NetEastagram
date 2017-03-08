@@ -13,11 +13,12 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     public static let cellIdentifier = "cellIdentifier"
     public let margin: CGFloat = 8.5
     public lazy var tableView: UITableView = self.creatTableView()
-    public var dataSource: [ScenicSpotModel] = []
+    public var dataSource: [PhotoDataModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initInternal()
+        requestPhotos()
     }
     
     //MARK: - private
@@ -25,10 +26,17 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         customBarTileViewWith(image: UIImage(named: "home-bar-icon"), title: Constants.HOME_TITLE)
         view.backgroundColor = UIColor(netHex: 0xe7e7e7)
         tableView.register(ScenicSpotCell.self, forCellReuseIdentifier: HomeViewController.cellIdentifier)
-        let spot = ScenicSpotModel(userName: "ID", chineseName: "景点", englishName: "spot", bestTime: "2017.3.12", image: UIImage(named: "pho-1")!, location: "稻城亚丁", recommendReason: "无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利无脑安利")
-        dataSource.append(spot)
-        dataSource.append(spot)
         view.addSubview(tableView)
+    }
+    
+    private func requestPhotos() {
+        let requestModel = PhotoListRequestModel(limit: 20, offset: 0)
+        NetworkService.instance.requestPhotoList(with: requestModel, success: { [weak self] (photoList) in
+            if let photoList = photoList {
+                self?.dataSource = photoList.photolist
+                self?.tableView.reloadData()
+            }
+        }, failure: nil)
     }
     
     //MARK: - lazy init
@@ -53,7 +61,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewController.cellIdentifier, for: indexPath) as! ScenicSpotCell
-        cell.scenicSpotModel = dataSource[indexPath.section]
+        cell.photoDataModel = dataSource[indexPath.section]
         let shapeLayer = CAShapeLayer()
         let bezierPath = UIBezierPath(roundedRect: cell.bounds.insetBy(dx: 0.0,dy: 2.0), cornerRadius: 5.0)
         shapeLayer.path = bezierPath.cgPath

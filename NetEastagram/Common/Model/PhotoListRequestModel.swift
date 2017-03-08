@@ -8,13 +8,15 @@
 
 import UIKit
 
-class PhotoListRequestModel: NSObject {
-    public var limit: Int
-    public var offset: Int
+class PhotoListRequestModel: BaseRequestModel {
+    public var limit: Int = 0
+    public var offset: Int = 0
     
-    init(limit: Int, offset: Int) {
+    required init() {}
+    
+    convenience init(limit: Int, offset: Int) {
+        self.init()
         self.limit = limit
         self.offset = offset
-        super.init()
     }
 }

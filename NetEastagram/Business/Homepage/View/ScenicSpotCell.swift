@@ -8,11 +8,12 @@
 
 import UIKit
 import SnapKit
+import SDWebImage
 
 class ScenicSpotCell: UITableViewCell {
-    public var scenicSpotModel: ScenicSpotModel? {
+    public var photoDataModel: PhotoDataModel? {
         didSet {
-            configCellWith(model: scenicSpotModel)
+            configCellWith(model: photoDataModel)
         }
     }
     public var headImage: UIImageView
@@ -73,12 +74,12 @@ class ScenicSpotCell: UITableViewCell {
         }
     }
     
-    func configCellWith(model: ScenicSpotModel?) {
+    func configCellWith(model: PhotoDataModel?) {
         guard let model = model else { return }
-        headImage.image = model.image
-        headLabel.text = model.chineseName
-        timeLabel.text = model.bestTime
-        bottomLabel.text = model.englishName
+        headImage.sd_setImage(with: URL(string: model.imageUrl))
+        headLabel.text = model.title
+        timeLabel.text = model.photoNo
+        bottomLabel.text = model.location
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

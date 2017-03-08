@@ -49,4 +49,7 @@ struct Constants {
     //MARK: - data persistence
     static let IS_LOGIN_KEY = "isLoginKey"
     static let IS_SAVE_ORIGINAL_KEY = "isSaveOriginalKey"
+    
+    //MARK: - network url
+    static let PHOTO_LIST = "http://localhost:3000/photolist"
 }

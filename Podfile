@@ -5,7 +5,7 @@ target 'NetEastagram' do
 	pod 'AFNetworking', '~> 3.0'
 	pod 'SDWebImage', '~> 3.8'
 	pod 'SnapKit', '~> 3.1.2'
-	pod 'HandyJSON', '~> 1.4.0'
+	pod 'HandyJSON', '~> 1.6.0'
 	pod 'MJRefresh'
 	pod 'Reachability'
 end

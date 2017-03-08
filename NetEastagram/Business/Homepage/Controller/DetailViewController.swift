@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import SDWebImage
 import SnapKit
 
 class DetailViewController: BaseViewController {
-    public var model: ScenicSpotModel?
+    public var model: PhotoDataModel?
     private lazy var scrollView: UIScrollView = self.createScrollView()
     private lazy var bottomBar: UIView = self.createBottomBar()
     private lazy var topBar: UIView = self.createTopBar()
@@ -46,10 +47,10 @@ class DetailViewController: BaseViewController {
         guard let model = model else { return }
         
         let sceneryImageView = UIImageView(frame: CGRect(x: 0, y: topBar.height, width: Constants.SCREEN_WIDTH, height: 313/375.0*Constants.SCREEN_WIDTH))
-        sceneryImageView.image = model.image
+        sceneryImageView.sd_setImage(with: URL(string: model.imageUrl))
         
         let locationLabel = UILabel()
-        locationLabel.text = model.location
+        locationLabel.text = model.province + "  " + model.location
         locationLabel.textColor = Constants.TEXT_GRAY_COLOR
         locationLabel.textAlignment = .right
         locationLabel.font = UIFont.systemFont(ofSize: 13.0)
@@ -61,7 +62,7 @@ class DetailViewController: BaseViewController {
         let reasonRightImage = UIImageView(image: UIImage(named: "home-detail-toleftline"))
         let reasonImage = UIImageView(image: UIImage(named: "home-detail-reason"))
         
-        reasonLabel.text = model.recommendReason
+        reasonLabel.text = model.reason
         reasonLabel.textColor = Constants.TEXT_GRAY_COLOR
         reasonLabel.font = UIFont.systemFont(ofSize: 12)
         reasonLabel.lineBreakMode = .byWordWrapping
@@ -141,7 +142,7 @@ class DetailViewController: BaseViewController {
         let portrait = UIImageView(image: UIImage(named: "home-detail-people"))
         res.addSubview(portrait)
         let userNameLabel = UILabel()
-        userNameLabel.text = model?.userName
+        userNameLabel.text = model?.posterName
         userNameLabel.textColor = Constants.LIGHT_GRAY_COLOR
         userNameLabel.font = UIFont.systemFont(ofSize: 13)
         res.addSubview(userNameLabel)
