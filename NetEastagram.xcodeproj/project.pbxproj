@@ -20,6 +20,7 @@
 		07512A701E6F10FF0050DD23 /* PhotoListDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A6F1E6F10FF0050DD23 /* PhotoListDataModel.swift */; };
 		07512A741E6F9E7B0050DD23 /* ScenicSpotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A731E6F9E7B0050DD23 /* ScenicSpotCell.swift */; };
 		07512A761E6F9EB60050DD23 /* PhotoDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A751E6F9EB60050DD23 /* PhotoDataModel.swift */; };
+		07512A7A1E6FEC020050DD23 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A791E6FEC020050DD23 /* DBManager.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
 		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
@@ -74,6 +75,7 @@
 		07512A6F1E6F10FF0050DD23 /* PhotoListDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoListDataModel.swift; path = Common/Model/PhotoListDataModel.swift; sourceTree = "<group>"; };
 		07512A731E6F9E7B0050DD23 /* ScenicSpotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScenicSpotCell.swift; path = Business/Homepage/View/ScenicSpotCell.swift; sourceTree = "<group>"; };
 		07512A751E6F9EB60050DD23 /* PhotoDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoDataModel.swift; path = Business/Homepage/Model/PhotoDataModel.swift; sourceTree = "<group>"; };
+		07512A791E6FEC020050DD23 /* DBManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DBManager.swift; path = Common/Util/DBManager.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 			children = (
 				07F4DDA01E45C19B00B0C98D /* Constants.swift */,
 				07F4DDAB1E47037500B0C98D /* Extension.swift */,
+				07512A791E6FEC020050DD23 /* DBManager.swift */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -614,6 +617,7 @@
 				07F4DD9D1E4423CC00B0C98D /* BaseViewController.swift in Sources */,
 				07F4DDAC1E47037500B0C98D /* Extension.swift in Sources */,
 				071ED2011E64F6F7005ADE44 /* SearchViewController.swift in Sources */,
+				07512A7A1E6FEC020050DD23 /* DBManager.swift in Sources */,
 				07C59FB31E178C2600A44F97 /* AppDelegate.swift in Sources */,
 				07E472E61E630542003AB89A /* ShootViewController.swift in Sources */,
 				0735A3CB1E489CA3006CB4C4 /* SettingSectionView.swift in Sources */,
