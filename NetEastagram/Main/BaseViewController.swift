@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class BaseViewController: UIViewController {
     public var tabBarHeight: CGFloat = 0

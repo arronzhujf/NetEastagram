@@ -11,7 +11,7 @@ import HandyJSON
 import AFNetworking
 
 class NetworkService: NSObject {
-    static let instance: NetworkService = NetworkService()
+    static private let instance: NetworkService = NetworkService()
     
     static func sharedService() -> NetworkService {
         return instance

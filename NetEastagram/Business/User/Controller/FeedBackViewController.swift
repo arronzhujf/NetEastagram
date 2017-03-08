@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 class FeedBackViewController: BaseViewController, UITextViewDelegate {
     private var adviseText: UITextView!

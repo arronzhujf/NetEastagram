@@ -52,4 +52,5 @@ struct Constants {
     
     //MARK: - network url
     static let PHOTO_LIST = "http://localhost:3000/photolist"
+    static let PHOTO_POST = "http://localhost:3000/upload"
 }

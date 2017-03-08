@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 import MJRefresh
 import MBProgressHUD
 
@@ -44,7 +43,7 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
             hud?.mode = .indeterminate
         }
         let requestModel = PhotoListRequestModel(limit: 20, offset: 0)
-        NetworkService.instance.requestPhotoList(with: requestModel, success: { [weak self] (photoList) in
+        NetworkService.sharedService().requestPhotoList(with: requestModel, success: { [weak self] (photoList) in
             if let photoList = photoList {
                 self?.dataSource = photoList.photolist
                 self?.tableView.reloadData()

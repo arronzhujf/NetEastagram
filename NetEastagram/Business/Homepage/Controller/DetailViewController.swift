@@ -8,7 +8,6 @@
 
 import UIKit
 import SDWebImage
-import SnapKit
 
 class DetailViewController: BaseViewController {
     public var model: PhotoDataModel?

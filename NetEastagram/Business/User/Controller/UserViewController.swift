@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SnapKit
 
 class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     var isLogin: Bool = false {
