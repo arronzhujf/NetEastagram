@@ -8,12 +8,17 @@
 
 import UIKit
 import SnapKit
+import MJRefresh
 
 class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDataSource {
     public static let cellIdentifier = "cellIdentifier"
     public let margin: CGFloat = 8.5
     public lazy var tableView: UITableView = self.creatTableView()
     public var dataSource: [PhotoDataModel] = []
+    
+    //refresh
+    private let header = MJRefreshNormalHeader()
+    private let footer = MJRefreshAutoNormalFooter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,14 +34,20 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         view.addSubview(tableView)
     }
     
-    private func requestPhotos() {
+    @objc private func requestPhotos() {
         let requestModel = PhotoListRequestModel(limit: 20, offset: 0)
         NetworkService.instance.requestPhotoList(with: requestModel, success: { [weak self] (photoList) in
             if let photoList = photoList {
                 self?.dataSource = photoList.photolist
                 self?.tableView.reloadData()
+                self?.header.endRefreshing()
             }
         }, failure: nil)
+    }
+    
+    @objc private func pullUpRefresh() {
+        //由于大作业给的服务器只有三个景点的数据所以这里的上拉刷新只做一个界面的效果
+        self.footer.endRefreshingWithNoMoreData()
     }
     
     //MARK: - lazy init
@@ -47,6 +58,10 @@ class HomeViewController: BaseViewController, UITableViewDelegate, UITableViewDa
         res.dataSource = self
         res.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         res.separatorStyle = .none
+        header.setRefreshingTarget(self, refreshingAction: #selector(requestPhotos))
+        footer.setRefreshingTarget(self, refreshingAction: #selector(pullUpRefresh))
+        res.mj_header = header
+        res.mj_footer = footer
         return res
     }
 
