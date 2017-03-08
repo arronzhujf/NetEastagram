@@ -74,6 +74,11 @@ class UserLoginedHeaderView: UIView {
         return nil
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        portrait.layer.cornerRadius = portrait.width / 2.0
+    }
+    
     private func initInternal() {
         addSubview(topView)
         addSubview(bottomView)
@@ -110,9 +115,9 @@ class UserLoginedHeaderView: UIView {
     
     private func createPortrait() -> UIImageView {
         let res = UIImageView(frame: CGRect(x: 0, y: 0, width: Constants.SCREEN_WIDTH-307, height: Constants.SCREEN_WIDTH-307))
+        res.backgroundColor = .white
         res.center = CGPoint(x: Constants.SCREEN_WIDTH / 2.0, y: 90)
         res.image = #imageLiteral(resourceName: "me")
-        res.layer.cornerRadius = res.frame.width / 2.0
         res.clipsToBounds = true
         return res
     }
