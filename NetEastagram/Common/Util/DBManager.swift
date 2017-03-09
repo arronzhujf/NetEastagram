@@ -61,7 +61,7 @@ class DBManager: NSObject {
 }
 
 
-    //MARK: - user mark operation
+//user mark operation
 extension DBManager {
     func isMarked(photoInfo model: PhotoDataModel, for userID: Int) -> Bool {
         guard let modelJSONString = model.toJSONString() else {
