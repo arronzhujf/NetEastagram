@@ -95,4 +95,17 @@ extension DBManager {
         let delete_sql = "DELETE FROM user_photo WHERE userid=" + String(userID) + " AND photo='" + modelJSONString + "'"
         return executeUpdate(with: delete_sql, values: nil)
     }
+    
+    func allMarks(of userID: Int) -> [PhotoDataModel] {
+        var res = [PhotoDataModel]()
+        let query_sql = "SELECT photo FROM user_photo WHERE userid=" + String(userID)
+        if let resArray = executeQuery(with: query_sql, values: nil) {
+            for item in resArray {
+                if let photoInfo = PhotoDataModel.deserialize(from: (item.first?.value as? String)) {
+                    res.append(photoInfo)
+                }
+            }
+        }
+        return  res
+    }
 }

@@ -130,7 +130,19 @@ class UserViewController: BaseViewController, UITableViewDelegate, UITableViewDa
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("点击cell: - TODO")
+        switch indexPath.row {
+        case 0:
+            print("点击发布")
+        case 1:
+            navigationController?.pushViewController(UserMarkViewController(), animated: true)
+        case 2:
+            print("点击偏好")
+        case 3:
+            print("点击邀请好友")
+        default: break
+            
+        }
+
     }
     
     public func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
