@@ -19,6 +19,7 @@ class HomeViewController: PhotoTableBaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showPhotoCacheData()
         requestPhotos(withHud: true)
     }
     
@@ -35,15 +36,20 @@ class HomeViewController: PhotoTableBaseViewController {
         }
         let requestModel = PhotoListRequestModel(limit: 20, offset: 0)
         NetworkService.sharedService().requestPhotoList(with: requestModel, success: { [weak self] (photoList) in
-            if let photoList = photoList {
+            if let photoList = photoList, photoList.photolist.count > 0 {
                 self?.dataSource = photoList.photolist
+                self?.cachePhotoData(photoList.photolist)
                 self?.tableView.reloadData()
                 self?.header.endRefreshing()
                 if let hud = self?.hud {
                     hud.hide(animated: true)
                 }
             }
-        }, failure: nil)
+        }) { [weak self] (error) in
+            self?.hud?.mode = .text
+            self?.hud?.label.text = Constants.NETWORK_ERROR
+            self?.hud?.hide(animated: true, afterDelay: 2.0)
+        }
     }
     
     @objc private func pullUpRefresh() {
@@ -51,9 +57,32 @@ class HomeViewController: PhotoTableBaseViewController {
         self.footer.endRefreshingWithNoMoreData()
     }
     
+    private func showPhotoCacheData() {
+        guard let photoJSONArray = UserDefaults.standard.value(forKey: Constants.PHOTO_CACHE_KEY) as? [String] else { return }
+        var photoArray: [PhotoDataModel] = []
+        for item in photoJSONArray {
+            if let dataModel = PhotoDataModel.deserialize(from: item) {
+                photoArray.append(dataModel)
+            }
+        }
+        dataSource = photoArray
+        tableView.reloadData()
+    }
+    
+    private func cachePhotoData(_ data: [PhotoDataModel]) {
+        var photoJSONArray: [String] = []
+        for photoData in data {
+            if let str = photoData.toJSONString() {
+                photoJSONArray.append(str)
+            }
+        }
+        UserDefaults.standard.set(photoJSONArray, forKey: Constants.PHOTO_CACHE_KEY)
+    }
+    
     //MARK: - lazy init
     override func creatTableView() -> UITableView {
         let res = super.creatTableView()
+        res.frame = CGRect(x: margin, y: 0, width: Constants.SCREEN_WIDTH - 2*margin, height: Constants.SCREEN_HEIGHT-statusBarHeight-naviBarHeight-tabBarHeight)
         header.setRefreshingTarget(self, refreshingAction: #selector(requestPhotos))
         footer.setRefreshingTarget(self, refreshingAction: #selector(pullUpRefresh))
         res.mj_header = header

@@ -28,7 +28,7 @@ class PhotoTableBaseViewController: BaseViewController, UITableViewDelegate, UIT
 
     //MARK: - lazy init
     public func creatTableView() -> UITableView {
-        let res = UITableView(frame: CGRect(x: margin, y: 0, width: Constants.SCREEN_WIDTH - 2*margin, height: Constants.SCREEN_HEIGHT-statusBarHeight-naviBarHeight-tabBarHeight), style: .grouped)
+        let res = UITableView(frame: CGRect(x: margin, y: 0, width: Constants.SCREEN_WIDTH - 2*margin, height: Constants.SCREEN_HEIGHT-statusBarHeight-naviBarHeight), style: .grouped)
         res.backgroundColor = UIColor(netHex: 0xe7e7e7)
         res.delegate = self
         res.dataSource = self

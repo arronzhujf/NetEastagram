@@ -45,11 +45,13 @@ struct Constants {
     static let SHOOT_CITY = "拍摄城市:"
     static let SHOOT_SPOT = "拍摄景点:"
     static let ADD_DESC = "添加描述:"
+    static let NETWORK_ERROR = "网络连接异常"
     
     //MARK: - data persistence
     static let USER_INFO_KEY = "userInfoKey"
     static let IS_LOGIN_KEY = "isLoginKey"
     static let IS_SAVE_ORIGINAL_KEY = "isSaveOriginalKey"
+    static let PHOTO_CACHE_KEY = "photoCacheKey"
     
     //MARK: - network url
     static let PHOTO_LIST = "http://localhost:3000/photolist"
