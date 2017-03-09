@@ -33,18 +33,4 @@ class PhotoDataModel: HandyJSON {
         self.favorite = favorite
         self.reason = reason
     }
-    
-//    public func configModel(photoNo: String, imageUrl: String, title: String, location: String, posterName: String, province: String, favorite: Bool, reason: String) -> ScenicSpotModel{
-//        let model = ScenicSpotModel()
-//        model.photoNo = photoNo
-//        model.imageUrl = imageUrl
-//        model.title = title
-//        model.location = location
-//        model.posterName = posterName
-//        model.province = province
-//        model.favorite = favorite
-//        model.reason = reason
-//        return model
-//    }
-
 }

@@ -22,7 +22,9 @@ class DBManager: NSObject {
     override init() {
         db = FMDatabase(path: DBManager.createDBPath())
         super.init()
-        db.executeUpdate("CREATE TABLE IF NOT EXISTS user_photo(userid text, photo text)", withArgumentsIn: nil)
+        db.open()
+        db.executeUpdate("CREATE TABLE IF NOT EXISTS user_photo(userid integer, photo text)", withArgumentsIn: nil)
+        db.close()
     }
     
     static private func createDBPath() -> String {
@@ -61,12 +63,12 @@ class DBManager: NSObject {
 
     //MARK: - user mark operation
 extension DBManager {
-    func isMarked(photoInfo model: PhotoDataModel, for userID: String) -> Bool {
+    func isMarked(photoInfo model: PhotoDataModel, for userID: Int) -> Bool {
         guard let modelJSONString = model.toJSONString() else {
             return false
         }
         var res = false
-        let query_sql = "SELECT * FROM user_photo WHERE userid=" + userID + "AND photo=" + modelJSONString
+        let query_sql = "SELECT * FROM user_photo WHERE userid=" + String(userID) + " AND photo='" + modelJSONString + "'"
         if let resArray = executeQuery(with: query_sql, values: nil), resArray.count > 0 {
             res = true
         }
@@ -74,7 +76,7 @@ extension DBManager {
 
     }
     
-    func addMark(photoInfo model: PhotoDataModel, for userID: String) -> Bool {
+    func addMark(photoInfo model: PhotoDataModel, for userID: Int) -> Bool {
         guard let modelJSONString = model.toJSONString() else {
             return false
         }
@@ -86,11 +88,11 @@ extension DBManager {
         
     }
     
-    func cancelMark(photoInfo model: PhotoDataModel, for userID: String) -> Bool {
+    func cancelMark(photoInfo model: PhotoDataModel, for userID: Int) -> Bool {
         guard let modelJSONString = model.toJSONString() else {
             return false
         }
-        let delete_sql = "DELETE * FROM user_photo WHERE userid=" + userID + "AND photo=" + modelJSONString
+        let delete_sql = "DELETE FROM user_photo WHERE userid=" + String(userID) + " AND photo='" + modelJSONString + "'"
         return executeUpdate(with: delete_sql, values: nil)
     }
 }

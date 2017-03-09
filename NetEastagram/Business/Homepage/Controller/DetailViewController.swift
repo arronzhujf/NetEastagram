@@ -15,9 +15,11 @@ class DetailViewController: BaseViewController {
     private lazy var bottomBar: UIView = self.createBottomBar()
     private lazy var topBar: UIView = self.createTopBar()
     private let reasonLabel: UILabel
+    private let markBtn: UIButton
     
     override public init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         reasonLabel = UILabel()
+        markBtn = UIButton()
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         
     }
@@ -114,9 +116,29 @@ class DetailViewController: BaseViewController {
         }
     }
     
+    private func isPhotoMarked() -> Bool {
+        guard let model = model, let userID = SharedPreferences.shared().userID else {
+            return false
+        }
+        return DBManager.sharedManager().isMarked(photoInfo: model, for: userID)
+    }
+    
     //MARK: - action
     @objc func markBtnClick() {
-        
+        guard let model = model, let userID = SharedPreferences.shared().userID else {
+            return
+        }
+        if isPhotoMarked() {
+            let isCancel = DBManager.sharedManager().cancelMark(photoInfo: model, for: userID)
+            if isCancel {
+                markBtn.setImage(UIImage(named: "home-detail-emptystar"), for: .normal)
+            }
+        } else {
+            let isAdd = DBManager.sharedManager().addMark(photoInfo: model, for: userID)
+            if isAdd {
+                markBtn.setImage(UIImage(named: "home-detail-star"), for: .normal)
+            }
+        }
     }
     
     @objc func downloadBtnClick() {
@@ -164,13 +186,17 @@ class DetailViewController: BaseViewController {
         topLine.backgroundColor = Constants.LIGHT_GRAY_COLOR
         res.addSubview(topLine)
         
-        let markBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 22))
-        markBtn.setImage(UIImage(named: "home-detail-emptystar"), for: .normal)
+        markBtn.frame = CGRect(x: 0, y: 0, width: 34, height: 22)
         markBtn.setTitle(Constants.MARK, for: .normal)
         markBtn.titleEdgeInsets = UIEdgeInsetsMake(0, 8, 0, -8)
         markBtn.setTitleColor(Constants.TEXT_GRAY_COLOR, for: .normal)
         markBtn.titleLabel?.font = UIFont.systemFont(ofSize: 13.0)
         markBtn.addTarget(self, action: #selector(markBtnClick), for: .touchUpInside)
+        if isPhotoMarked() {
+            markBtn.setImage(UIImage(named: "home-detail-star"), for: .normal)
+        } else {
+            markBtn.setImage(UIImage(named: "home-detail-emptystar"), for: .normal)
+        }
         res.addSubview(markBtn)
         
         let downloadBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 34, height: 22))
