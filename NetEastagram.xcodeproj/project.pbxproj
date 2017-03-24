@@ -25,6 +25,7 @@
 		07512A8F1E7066460050DD23 /* SharedPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A8E1E7066460050DD23 /* SharedPreferences.swift */; };
 		07512A911E70F5D40050DD23 /* UserMarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A901E70F5D40050DD23 /* UserMarkViewController.swift */; };
 		07512A931E70FE180050DD23 /* PhotoTableBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A921E70FE180050DD23 /* PhotoTableBaseViewController.swift */; };
+		07512A951E71A2BF0050DD23 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07512A941E71A2BF0050DD23 /* SearchTableViewCell.swift */; };
 		07BD127F1E1682F300377C7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD127D1E1682F300377C7A /* Main.storyboard */; };
 		07BD12811E1682F300377C7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12801E1682F300377C7A /* Assets.xcassets */; };
 		07BD12841E1682F300377C7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07BD12821E1682F300377C7A /* LaunchScreen.storyboard */; };
@@ -84,6 +85,7 @@
 		07512A8E1E7066460050DD23 /* SharedPreferences.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedPreferences.swift; path = Common/Util/SharedPreferences.swift; sourceTree = "<group>"; };
 		07512A901E70F5D40050DD23 /* UserMarkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserMarkViewController.swift; path = Business/User/Controller/UserMarkViewController.swift; sourceTree = "<group>"; };
 		07512A921E70FE180050DD23 /* PhotoTableBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoTableBaseViewController.swift; path = Business/Homepage/Controller/PhotoTableBaseViewController.swift; sourceTree = "<group>"; };
+		07512A941E71A2BF0050DD23 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchTableViewCell.swift; path = Business/Search/View/SearchTableViewCell.swift; sourceTree = "<group>"; };
 		07BD12761E1682F300377C7A /* NetEastagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetEastagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07BD127E1E1682F300377C7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		07BD12801E1682F300377C7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		071ED1FB1E64F678005ADE44 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				07512A941E71A2BF0050DD23 /* SearchTableViewCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -628,6 +631,7 @@
 				07512A5D1E6AD5800050DD23 /* DetailViewController.swift in Sources */,
 				07512A761E6F9EB60050DD23 /* PhotoDataModel.swift in Sources */,
 				07512A931E70FE180050DD23 /* PhotoTableBaseViewController.swift in Sources */,
+				07512A951E71A2BF0050DD23 /* SearchTableViewCell.swift in Sources */,
 				07512A8A1E70627F0050DD23 /* BaseRequestModel.swift in Sources */,
 				0734D0E01E6A6DA400CB7B19 /* HomeViewController.swift in Sources */,
 				07E08E691E419875001DEC23 /* MainTabBarViewController.swift in Sources */,

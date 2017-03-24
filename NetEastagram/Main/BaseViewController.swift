@@ -32,7 +32,8 @@ class BaseViewController: UIViewController {
     
     private func customInternal() {
         view.backgroundColor = .white
-        edgesForExtendedLayout = [.bottom]
+        navigationController?.navigationBar.isTranslucent = false
+        edgesForExtendedLayout = [.bottom, .top]
         automaticallyAdjustsScrollViewInsets = false
         tabBarHeight = tabBarController?.tabBar.height ?? 0
         naviBarHeight = navigationController?.navigationBar.height ?? 0

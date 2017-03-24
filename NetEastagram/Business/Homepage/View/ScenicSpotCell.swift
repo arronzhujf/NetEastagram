@@ -16,11 +16,11 @@ class ScenicSpotCell: UITableViewCell {
             configCellWith(model: photoDataModel)
         }
     }
-    public var headImage: UIImageView
-    public var headLabel: UILabel
-    public var bottomContainer: UIView
-    public var timeLabel: UILabel
-    public var bottomLabel: UILabel
+    private let headImage: UIImageView
+    private let headLabel: UILabel
+    private let bottomContainer: UIView
+    private let timeLabel: UILabel
+    private let bottomLabel: UILabel
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         headImage = UIImageView()
@@ -29,14 +29,14 @@ class ScenicSpotCell: UITableViewCell {
         timeLabel = UILabel()
         bottomLabel = UILabel()
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        self.customInternal()
+        customInternal()
     }
     
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
     
-    //MARK : private
+    //MARK: - private
     func customInternal() {
         contentView.backgroundColor = UIColor(netHex: 0xe7e7e7)
         
